@@ -1,4 +1,10 @@
-# SQL 中Group by 的使用
+---
+title: SQL 中Group by 的使用
+date: 2016-05-11 10:59:47
+categories: "SQL"
+tags:
+- 学习
+---
 
 ## 在多表查询中使用Group by ##
 
@@ -10,7 +16,9 @@
 |部门1|餐厅1|2000|20000|
 |部门1|餐厅2|2000|20000|
 |部门2|餐厅1|2000|20000|
- 
+
+<!-- more -->
+
 ```sql
 select dept.deptname,dinner.name,cost1.countsum,cost2.money from cost as c 
 left join (select dining_id,dept_id,count(*) as countsum from  cost group by dining_id,dept_id) as c1 on c1.dining_id = c.dining_id and c1.dept_id=c.dept_id

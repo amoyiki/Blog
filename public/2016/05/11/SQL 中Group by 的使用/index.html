@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="この場合、" />
+  <meta name="keywords" content="学习," />
 
 
 
@@ -80,16 +80,100 @@
 
 
 
-<meta name="description" content="个人BLOG">
-<meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta name="description" content="在多表查询中使用Group by
+有三张表，一张是部门表-dept，一张是餐厅表-dinner，还有一张是员工消费明细表-cost(含餐厅、部门外键)现在需要一张报表，需求如下:
+
+
+
+部门名称
+餐厅名称
+消费总次数
+消费总金额
+
+
+
+
+部门1
+餐厅1
+2000
+20000
+
+
+部门1
+餐厅2
+2000
+20000
+
+
+部门2
+餐厅1
+2000
+20000">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQL 中Group by 的使用">
+<meta property="og:url" content="http://yoursite.com/2016/05/11/SQL 中Group by 的使用/index.html">
 <meta property="og:site_name" content="四畳半神话大系">
-<meta property="og:description" content="个人BLOG">
-<meta property="og:updated_time" content="2016-04-28T15:06:45.346Z">
+<meta property="og:description" content="在多表查询中使用Group by
+有三张表，一张是部门表-dept，一张是餐厅表-dinner，还有一张是员工消费明细表-cost(含餐厅、部门外键)现在需要一张报表，需求如下:
+
+
+
+部门名称
+餐厅名称
+消费总次数
+消费总金额
+
+
+
+
+部门1
+餐厅1
+2000
+20000
+
+
+部门1
+餐厅2
+2000
+20000
+
+
+部门2
+餐厅1
+2000
+20000">
+<meta property="og:updated_time" content="2016-05-14T15:10:40.738Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分类">
-<meta name="twitter:description" content="个人BLOG">
+<meta name="twitter:title" content="SQL 中Group by 的使用">
+<meta name="twitter:description" content="在多表查询中使用Group by
+有三张表，一张是部门表-dept，一张是餐厅表-dinner，还有一张是员工消费明细表-cost(含餐厅、部门外键)现在需要一张报表，需求如下:
+
+
+
+部门名称
+餐厅名称
+消费总次数
+消费总金额
+
+
+
+
+部门1
+餐厅1
+2000
+20000
+
+
+部门1
+餐厅2
+2000
+20000
+
+
+部门2
+餐厅1
+2000
+20000">
 
 
 
@@ -111,7 +195,7 @@
   
 
   
-    分类 | 四畳半神话大系
+    SQL 中Group by 的使用 | 四畳半神话大系
   
 </title>
 </head>
@@ -245,14 +329,47 @@
   <div id="posts" class="posts-expand">
     
     
-      <div class="category-all-page">
-        <div class="category-all-title">
-            目前共计 5 个分类
-        </div>
-        <div class="category-all">
-          <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/SQL/">SQL</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/半畳/">半畳</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具配置/">工具配置</a><span class="category-list-count">1</span></li></ul>
-        </div>
-      </div>
+      <h2 id="在多表查询中使用Group-by"><a href="#在多表查询中使用Group-by" class="headerlink" title="在多表查询中使用Group by"></a>在多表查询中使用Group by</h2><blockquote>
+<p>有三张表，一张是部门表-dept，一张是餐厅表-dinner，还有一张是员工消费明细表-cost(<strong>含餐厅、部门外键</strong>)<br>现在需要一张报表，需求如下:</p>
+<table>
+<thead>
+<tr>
+<th>部门名称</th>
+<th>餐厅名称</th>
+<th>消费总次数</th>
+<th>消费总金额</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>部门1</td>
+<td>餐厅1</td>
+<td>2000</td>
+<td>20000</td>
+</tr>
+<tr>
+<td>部门1</td>
+<td>餐厅2</td>
+<td>2000</td>
+<td>20000</td>
+</tr>
+<tr>
+<td>部门2</td>
+<td>餐厅1</td>
+<td>2000</td>
+<td>20000</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<a id="more"></a>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> dept.deptname,dinner.name,cost1.countsum,cost2.money <span class="keyword">from</span> <span class="keyword">cost</span> <span class="keyword">as</span> c </span><br><span class="line"><span class="keyword">left</span> <span class="keyword">join</span> (<span class="keyword">select</span> dining_id,dept_id,<span class="keyword">count</span>(*) <span class="keyword">as</span> countsum <span class="keyword">from</span>  <span class="keyword">cost</span> <span class="keyword">group</span> <span class="keyword">by</span> dining_id,dept_id) <span class="keyword">as</span> c1 <span class="keyword">on</span> c1.dining_id = c.dining_id <span class="keyword">and</span> c1.dept_id=c.dept_id</span><br><span class="line"><span class="keyword">left</span> <span class="keyword">join</span> (<span class="keyword">select</span> dining_id,dept_id,<span class="keyword">sum</span>(money) <span class="keyword">as</span> money <span class="keyword">from</span>  <span class="keyword">cost</span> <span class="keyword">group</span> <span class="keyword">by</span> dining_id,dept_id) <span class="keyword">as</span> c2 <span class="keyword">on</span> c2.dining_id = c.dining_id <span class="keyword">and</span> c2.dept_id=ic.dept_id</span><br><span class="line"><span class="keyword">left</span> <span class="keyword">join</span> dinner <span class="keyword">as</span> d <span class="keyword">on</span> d.id= c.dining_id</span><br><span class="line"><span class="keyword">left</span> <span class="keyword">join</span> dept <span class="keyword">as</span> dept <span class="keyword">on</span> dept.deptid= c.dept_id ;</span><br></pre></td></tr></table></figure>
+<p><strong>注意：</strong></p>
+<blockquote>
+<p>当使用<code>group by</code>时，<code>select</code> 指定的字段要么作为分组<br>分组依据，写在<code>group by</code> 后边，要吗已经被包含在聚合函数中。<br>如果不是这两种情况的话会跳出错误：</p>
+<p><em>选择列表中的列 ‘xxx’ 无效，因为该列没有包含在聚合函数或 GROUP BY 子句中。</em></p>
+</blockquote>
+
     
   </div>
 
@@ -262,6 +379,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/05/11/SQL 中Group by 的使用/"
+           data-title="SQL 中Group by 的使用" data-url="http://yoursite.com/2016/05/11/SQL 中Group by 的使用/">
+      </div>
+    
+  </div>
+
 
         </div>
         
