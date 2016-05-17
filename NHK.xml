@@ -1,0 +1,547 @@
+<rss xmlns:itunes="http://www.itunes.com/DTDs/Podcast-1.0.dtd" version="2.0">
+<channel>
+<copyright>NHK (Japan Broadcasting Corporation)</copyright>
+<description>
+日本的公共广播电视机构NHK为您免费提供值得信赖的日语讲座的播客服务，您可一面收听在东京一所大学学习日语的安娜的故事，一面轻松地学习语法和词汇。 nhk.jp/lesson
+</description>
+<itunes:subtitle>
+日本的公共广播电视机构NHK为您免费提供值得信赖的日语讲座的播客服务，您可一面收听在东京一所大学学习日语的安娜的故事，一面轻松地学习语法和词汇。 nhk.jp/lesson
+</itunes:subtitle>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:image href="http://www.nhk.or.jp/lesson/common/images/podcast/chinese.jpg"/>
+<language>zh</language>
+<link>http://www.nhk.or.jp/lesson/chinese/</link>
+<lastBuildDate>Wed, 11 May 2016 16:13:32 +0900</lastBuildDate>
+<title>简明日语 - NHK WORLD日本国际广播电台</title>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/1-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第1课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第1课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/2-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第2课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第2课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/3-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第3课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第3课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/4-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第4课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第4课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/5-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第5课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第5课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/6-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第6课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第6课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/7-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第7课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第7课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/8-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第8课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第8课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/9-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第9课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第9课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/10-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第10课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第10课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/11-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第11课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第11课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/12-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第12课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第12课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/13-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第13课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第13课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/14-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第14课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第14课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/15-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第15课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第15课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/16-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第16课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第16课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/17-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第17课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第17课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/18-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第18课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第18课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/19-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第19课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第19课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/20-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第20课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第20课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/21-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第21课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第21课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/22-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第22课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第22课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/23-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第23课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第23课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/24-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第24课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第24课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/25-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第25课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第25课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/26-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第26课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第26课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/27-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第27课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第27课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/28-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第28课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第28课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/29-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第29课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第29课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/30-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第30课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第30课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/31-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第31课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第31课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/32-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第32课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第32课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/33-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第33课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第33课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/34-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第34课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第34课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/35-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第35课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第35课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/36-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第36课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第36课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/37-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第37课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第37课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/38-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第38课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第38课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/39-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第39课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第39课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/40-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第40课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第40课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/41-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第41课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第41课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/42-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第42课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第42课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/43-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第43课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第43课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/44-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第44课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第44课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/45-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第45课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第45课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/46-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第46课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第46课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/47-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第47课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第47课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+<item>
+<enclosure url="http://www.nhk.or.jp/lesson/chinese/learn/mp3/48-zh-le_01.mp3" length="4802040" type="audio/mpeg"/>
+<title>第48课</title>
+<itunes:author>NHK WORLD RADIO JAPAN</itunes:author>
+<itunes:summary>第48课,谢谢你们的多方关照。</itunes:summary>
+<itunes:duration>10:00</itunes:duration>
+<itunes:category text="Education">
+<itunes:category text="Language Courses"/>
+</itunes:category>
+<pubDate>Tue, 22 Mar 2016 00:00:00 +0900</pubDate>
+</item>
+</channel></rss>
