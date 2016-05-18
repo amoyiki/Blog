@@ -23,11 +23,8 @@ tags:
     列出all中所有文件
     
     - tar -tf all.tar 
-
-<!-- more -->
-
 3. 切换命令/图形界面
-    
+    <!-- more -->
     切换成命令界面（暂时）
 
     `Ctrl+Alt+空格` `Ctrl+Alt+F1~F6`
@@ -45,4 +42,19 @@ tags:
     切换成图形界面（永久）
 
     > $>echo “/usr/sbin/gdm” | sudo tee /etc/X11/default-display-manager
+
+4. Linux 软件安装步骤
+    1. 加载配置 `sudo ./cinfigure` **注意：**  在此命令后面添加`--prefix=...`可以指定安装路径，例如`sudo ./configure --prefix=/usr/local/python`
+    2. 编译 `sudo make`
+    3. 安装 `sudo make install`
+5. Linux 清屏命令
+    - `$ clear` 保留历史记录，将页面下翻一页而已
+    - `$ reset` 真正意义上的清空界面
+6. Linux 更改计算机名
+
+    > $ sudo vim /etc/hostname
+    > 将第一行改为你想要的名字
+
+
+
 
