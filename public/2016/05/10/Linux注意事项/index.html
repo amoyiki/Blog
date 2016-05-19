@@ -110,7 +110,7 @@ unzip *.zip
 tar -cf all.tar *.jpg # -c新的包，f文件名
 
 tar -rf all.tar *.">
-<meta property="og:updated_time" content="2016-05-10T12:22:03.929Z">
+<meta property="og:updated_time" content="2016-05-18T13:12:14.924Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux注意事项">
 <meta name="twitter:description" content="下载、解压、执行 make make install wget 等命令需要在命令前加上sudo(PS：最好所有命令都加上)
@@ -301,10 +301,8 @@ tar -rf all.tar *.">
 </li>
 </ul>
 </li>
-</ol>
-<a id="more"></a>
-<ol>
 <li><p>切换命令/图形界面</p>
+ <a id="more"></a>
 <p> 切换成命令界面（暂时）</p>
 <p> <code>Ctrl+Alt+空格</code> <code>Ctrl+Alt+F1~F6</code></p>
 <p> 切换成命令模式（永久）</p>
@@ -319,6 +317,23 @@ tar -rf all.tar *.">
 <p> 切换成图形界面（永久）</p>
 <blockquote>
 <p>$&gt;echo “/usr/sbin/gdm” | sudo tee /etc/X11/default-display-manager</p>
+</blockquote>
+</li>
+<li><p>Linux 软件安装步骤</p>
+<ol>
+<li>加载配置 <code>sudo ./cinfigure</code> <strong>注意：</strong>  在此命令后面添加<code>--prefix=...</code>可以指定安装路径，例如<code>sudo ./configure --prefix=/usr/local/python</code></li>
+<li>编译 <code>sudo make</code></li>
+<li>安装 <code>sudo make install</code></li>
+</ol>
+</li>
+<li>Linux 清屏命令<ul>
+<li><code>$ clear</code> 保留历史记录，将页面下翻一页而已</li>
+<li><code>$ reset</code> 真正意义上的清空界面</li>
+</ul>
+</li>
+<li><p>Linux 更改计算机名</p>
+<blockquote>
+<p>$ sudo vim /etc/hostname<br>将第一行改为你想要的名字</p>
 </blockquote>
 </li>
 </ol>
