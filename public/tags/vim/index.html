@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="学习," />
+  <meta name="keywords" content="この場合、" />
 
 
 
@@ -80,52 +80,15 @@
 
 
 
-<meta name="description" content="下载、解压、执行 make make install wget 等命令需要在命令前加上sudo(PS：最好所有命令都加上)
-解压与压缩命令
- 解压命令：
-
-tar -zxvf *.tar.gz
-tar -xvf *.tar
-unrar e *.rar
-unzip *.zip
-压缩命令：
-
-tar -cf all.tar *.jpg # -c新的包，f文件名
-
-tar -rf all.tar *.">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Linux注意事项">
-<meta property="og:url" content="http://yoursite.com/2016/05/10/Linux注意事项/index.html">
+<meta name="description" content="个人BLOG">
+<meta property="og:type" content="website">
+<meta property="og:title" content="四畳半神话大系">
+<meta property="og:url" content="http://yoursite.com/tags/vim/index.html">
 <meta property="og:site_name" content="四畳半神话大系">
-<meta property="og:description" content="下载、解压、执行 make make install wget 等命令需要在命令前加上sudo(PS：最好所有命令都加上)
-解压与压缩命令
- 解压命令：
-
-tar -zxvf *.tar.gz
-tar -xvf *.tar
-unrar e *.rar
-unzip *.zip
-压缩命令：
-
-tar -cf all.tar *.jpg # -c新的包，f文件名
-
-tar -rf all.tar *.">
-<meta property="og:updated_time" content="2016-05-18T13:12:14.924Z">
+<meta property="og:description" content="个人BLOG">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux注意事项">
-<meta name="twitter:description" content="下载、解压、执行 make make install wget 等命令需要在命令前加上sudo(PS：最好所有命令都加上)
-解压与压缩命令
- 解压命令：
-
-tar -zxvf *.tar.gz
-tar -xvf *.tar
-unrar e *.rar
-unzip *.zip
-压缩命令：
-
-tar -cf all.tar *.jpg # -c新的包，f文件名
-
-tar -rf all.tar *.">
+<meta name="twitter:title" content="四畳半神话大系">
+<meta name="twitter:description" content="个人BLOG">
 
 
 
@@ -143,13 +106,7 @@ tar -rf all.tar *.">
   };
 </script>
 
-  <title>
-  
-
-  
-    Linux注意事项 | 四畳半神话大系
-  
-</title>
+  <title> 标签: vim | 四畳半神话大系 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -278,68 +235,46 @@ tar -rf all.tar *.">
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
+  <div id="posts" class="posts-collapse">
+    <div class="collection-title">
+      <h2 >
+        vim
+        <small>标签</small>
+      </h2>
+    </div>
+
     
-    
-      <ol>
-<li>下载、解压、执行 <code>make</code> <code>make install</code> <code>wget</code> 等命令需要在命令前加上<code>sudo</code>(<strong>PS：最好所有命令都加上</strong>)</li>
-<li><p>解压与压缩命令</p>
-<p> 解压命令：</p>
-<ul>
-<li><code>tar</code> <code>-zxvf</code> *.tar.gz</li>
-<li><code>tar</code> <code>-xvf</code> *.tar</li>
-<li><code>unrar</code> e *.rar</li>
-<li><p><code>unzip</code> *.zip</p>
-<p>压缩命令：</p>
-</li>
-<li><p>tar -cf all.tar *.jpg # -c新的包，f文件名</p>
-</li>
-<li><p>tar -rf all.tar *.gif # -r新增加</p>
-<p>列出all中所有文件</p>
-</li>
-<li><p>tar -tf all.tar </p>
-</li>
-</ul>
-</li>
-<li><p>切换命令/图形界面</p>
- <a id="more"></a>
-<p> 切换成命令界面（暂时）</p>
-<p> <code>Ctrl+Alt+空格</code> <code>Ctrl+Alt+F1~F6</code></p>
-<p> 切换成命令模式（永久）</p>
-<blockquote>
-<p>$&gt;echo “false” | sudo tee /etc/X11/default-display-manager</p>
-</blockquote>
-<p> 然后重启Ubuntu</p>
-<p> 切换成图形界面（暂时）</p>
-<blockquote>
-<p>startx</p>
-</blockquote>
-<p> 切换成图形界面（永久）</p>
-<blockquote>
-<p>$&gt;echo “/usr/sbin/gdm” | sudo tee /etc/X11/default-display-manager</p>
-</blockquote>
-</li>
-<li><p>Linux 软件安装步骤</p>
-<ol>
-<li>加载配置 <code>sudo ./cinfigure</code> <strong>注意：</strong>  在此命令后面添加<code>--prefix=...</code>可以指定安装路径，例如<code>sudo ./configure --prefix=/usr/local/python</code></li>
-<li>编译 <code>sudo make</code></li>
-<li>安装 <code>sudo make install</code></li>
-</ol>
-</li>
-<li>Linux 清屏命令<ul>
-<li><code>$ clear</code> 保留历史记录，将页面下翻一页而已</li>
-<li><code>$ reset</code> 真正意义上的清空界面</li>
-</ul>
-</li>
-<li><p>Linux 更改计算机名</p>
-<blockquote>
-<p>$ sudo vim /etc/hostname<br>将第一行改为你想要的名字</p>
-</blockquote>
-</li>
-</ol>
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/2016/05/19/vim使用技巧/" itemprop="url">
+              
+                <span itemprop="name">Vim使用技巧</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2016-05-19T08:41:57+08:00"
+              content="2016-05-19" >
+          05-19
+        </time>
+      </div>
+
+    </header>
+  </article>
+
 
     
   </div>
+
+  
 
 
           </div>
@@ -347,14 +282,6 @@ tar -rf all.tar *.">
 
 
           
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2016/05/10/Linux注意事项/"
-           data-title="Linux注意事项" data-url="http://yoursite.com/2016/05/10/Linux注意事项/">
-      </div>
-    
-  </div>
-
 
         </div>
         
