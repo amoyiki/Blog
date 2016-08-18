@@ -80,25 +80,25 @@
 
 
 
-<meta name="description" content="关于我毕业于某三流学院的见习Java魔法学徒,现转为Python魔法学徒。喜欢美剧，日剧，动漫，日音。努力学习不同的知识，扩大自己的舒适区。
-关于BLOG
-记录自己学习的过程，内容不一定有深度。
-顺便写一些日记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta name="description" content="循环插入10万条测试数据12345678declare @i intset @i=1while @i&amp;lt;100000begin    insert into test(title,date_time) values(&apos;test&apos;+cast(@i as ncahr(10)),getdate())    set @i=@i+1endgo
+注意:  
+
+cast()函数是强制类型转换与convert">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQL 生成10万条测试数据">
+<meta property="og:url" content="http://yoursite.com/2016/08/18/SQL-生成10万条测试数据/index.html">
 <meta property="og:site_name" content="四畳半神话大系">
-<meta property="og:description" content="关于我毕业于某三流学院的见习Java魔法学徒,现转为Python魔法学徒。喜欢美剧，日剧，动漫，日音。努力学习不同的知识，扩大自己的舒适区。
-关于BLOG
-记录自己学习的过程，内容不一定有深度。
-顺便写一些日记">
-<meta property="og:updated_time" content="2016-08-18T03:01:24.972Z">
+<meta property="og:description" content="循环插入10万条测试数据12345678declare @i intset @i=1while @i&amp;lt;100000begin    insert into test(title,date_time) values(&apos;test&apos;+cast(@i as ncahr(10)),getdate())    set @i=@i+1endgo
+注意:  
+
+cast()函数是强制类型转换与convert">
+<meta property="og:updated_time" content="2016-08-18T03:04:49.108Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于">
-<meta name="twitter:description" content="关于我毕业于某三流学院的见习Java魔法学徒,现转为Python魔法学徒。喜欢美剧，日剧，动漫，日音。努力学习不同的知识，扩大自己的舒适区。
-关于BLOG
-记录自己学习的过程，内容不一定有深度。
-顺便写一些日记">
+<meta name="twitter:title" content="SQL 生成10万条测试数据">
+<meta name="twitter:description" content="循环插入10万条测试数据12345678declare @i intset @i=1while @i&amp;lt;100000begin    insert into test(title,date_time) values(&apos;test&apos;+cast(@i as ncahr(10)),getdate())    set @i=@i+1endgo
+注意:  
+
+cast()函数是强制类型转换与convert">
 
 
 
@@ -120,7 +120,7 @@
   
 
   
-    关于 | 四畳半神话大系
+    SQL 生成10万条测试数据 | 四畳半神话大系
   
 </title>
 </head>
@@ -254,10 +254,12 @@
   <div id="posts" class="posts-expand">
     
     
-      <h3 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h3><p>毕业于某三流学院的见习<code>Java</code>魔法学徒,现转为<code>Python</code>魔法学徒。喜欢<code>美剧</code>，<code>日剧</code>，<code>动漫</code>，<code>日音</code>。努力学习不同的知识，扩大自己的舒适区。</p>
-<h3 id="关于BLOG"><a href="#关于BLOG" class="headerlink" title="关于BLOG"></a>关于BLOG</h3><ol>
-<li>记录自己学习的过程，内容不一定有深度。</li>
-<li><del>顺便写一些日记</del></li>
+      <h3 id="循环插入10万条测试数据"><a href="#循环插入10万条测试数据" class="headerlink" title="循环插入10万条测试数据"></a>循环插入10万条测试数据</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">declare</span> @i <span class="built_in">int</span></span><br><span class="line"><span class="keyword">set</span> @i=<span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> @i&lt;<span class="number">100000</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span>(title,date_time) <span class="keyword">values</span>(<span class="string">'test'</span>+<span class="keyword">cast</span>(@i <span class="keyword">as</span> ncahr(<span class="number">10</span>)),<span class="keyword">getdate</span>())</span><br><span class="line">    <span class="keyword">set</span> @i=@i+<span class="number">1</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">go</span></span><br></pre></td></tr></table></figure>
+<p><strong>注意</strong>:  </p>
+<ol>
+<li><code>cast()</code>函数是强制类型转换与<code>convert()</code>用法一致</li>
+<li><code>declare</code> 用于声明变量<a id="more"></a>
+</li>
 </ol>
 
     
@@ -271,8 +273,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="about/index.html"
-           data-title="关于" data-url="http://yoursite.com/about/index.html">
+      <div class="ds-thread" data-thread-key="2016/08/18/SQL-生成10万条测试数据/"
+           data-title="SQL 生成10万条测试数据" data-url="http://yoursite.com/2016/08/18/SQL-生成10万条测试数据/">
       </div>
     
   </div>
