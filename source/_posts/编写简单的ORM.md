@@ -10,7 +10,6 @@ tags:
 <!-- more -->
 
 ```python
-
 class Field(object):
     def __init__(self, name, colum_type):
         self.name = name
@@ -82,7 +81,6 @@ class Model(dict, metaclass=ModelMetaclass):
 ```
 
 ```python
-
 class User(Model):
     # 定义类的属性到列的映射：
     id = IntegerField('id')
