@@ -6,11 +6,10 @@ tags:
 - 学习
 ---
 
-[TOC]
 
-<!-- more -->
 ## 排序 ##
 ### 列表和字典混合排序 ###
+<!-- more -->
 ```python
 
 persons = [{'name':'zhang3','age':15},{'name':'li4','age':12}]
