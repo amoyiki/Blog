@@ -55,6 +55,9 @@ tags:
     > $ sudo vim /etc/hostname
     > 将第一行改为你想要的名字
 
-
+7. Ubuntu apt-get update失败
+    > E: Could not get lock /var/lib/apt/lists/lock 
+    > E: Could not get lock /var/lib/dpkg/lock
+    > 将这两个文件删除即可执行update命令
 
 
