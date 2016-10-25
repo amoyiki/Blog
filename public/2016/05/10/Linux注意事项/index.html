@@ -110,7 +110,7 @@ unzip *.zip
 tar -cf all.tar *.jpg # -c新的包，f文件名
 
 tar -rf all.tar *.">
-<meta property="og:updated_time" content="2016-10-16T13:37:01.940Z">
+<meta property="og:updated_time" content="2016-10-19T14:37:04.082Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux注意事项">
 <meta name="twitter:description" content="下载、解压、执行 make make install wget 等命令需要在命令前加上sudo(PS：最好所有命令都加上)
@@ -334,6 +334,11 @@ tar -rf all.tar *.">
 <li><p>Linux 更改计算机名</p>
 <blockquote>
 <p>$ sudo vim /etc/hostname<br>将第一行改为你想要的名字</p>
+</blockquote>
+</li>
+<li><p>Ubuntu apt-get update失败</p>
+<blockquote>
+<p>E: Could not get lock /var/lib/apt/lists/lock<br>E: Could not get lock /var/lib/dpkg/lock<br>将这两个文件删除即可执行update命令</p>
 </blockquote>
 </li>
 </ol>

@@ -60,7 +60,6 @@ tags:
     > E: Could not get lock /var/lib/dpkg/lock
     > 将这两个文件删除即可执行update命令
 
-
 8. 中断命令执行
     > 有时候命令执行到一半发现执行错误，或者命令执行时卡死。需要执行中断命令
     > `Ctrl + z`
@@ -69,4 +68,10 @@ tags:
 ```bash
 $> mkdir aa # 创建aa文件夹
 $> touch aa.log # 创建aa.log文件(0字节)
+```
+
+10 . Linux 查看进程
+```bash
+ps -ef | grep nginx
+>>>>>>> Stashed changes
 ```
