@@ -44,7 +44,7 @@ tags:
     > $>echo “/usr/sbin/gdm” | sudo tee /etc/X11/default-display-manager
 
 4. Linux 软件安装步骤
-    1. 加载配置 `sudo ./cinfigure` **注意：**  在此命令后面添加`--prefix=...`可以指定安装路径，例如`sudo ./configure --prefix=/usr/local/python`
+    1. 加载配置 `sudo ./configure` **注意：**  在此命令后面添加`--prefix=...`可以指定安装路径，例如`sudo ./configure --prefix=/usr/local/python`
     2. 编译 `sudo make`
     3. 安装 `sudo make install`
 5. Linux 清屏命令
@@ -61,3 +61,12 @@ tags:
     > 将这两个文件删除即可执行update命令
 
 
+8. 中断命令执行
+    > 有时候命令执行到一半发现执行错误，或者命令执行时卡死。需要执行中断命令
+    > `Ctrl + z`
+
+9. 创建文件夹或文件
+```bash
+$> mkdir aa # 创建aa文件夹
+$> touch aa.log # 创建aa.log文件(0字节)
+```
