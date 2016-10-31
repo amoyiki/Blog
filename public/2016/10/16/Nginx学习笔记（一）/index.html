@@ -80,16 +80,16 @@
 
 
 
-<meta name="description" content="在Linux下安装Nginx1.在(Nginx官网)[]上下载压缩包。2.解压后进行安装">
+<meta name="description" content="在Linux下安装Nginx1.在(Nginx官网)[http://nginx.org/en/download.html]上下载压缩包。2.解压后进行安装">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Nginx学习笔记（一）">
 <meta property="og:url" content="http://yoursite.com/2016/10/16/Nginx学习笔记（一）/index.html">
 <meta property="og:site_name" content="四畳半神话大系">
-<meta property="og:description" content="在Linux下安装Nginx1.在(Nginx官网)[]上下载压缩包。2.解压后进行安装">
-<meta property="og:updated_time" content="2016-10-22T10:11:31.948Z">
+<meta property="og:description" content="在Linux下安装Nginx1.在(Nginx官网)[http://nginx.org/en/download.html]上下载压缩包。2.解压后进行安装">
+<meta property="og:updated_time" content="2016-10-26T02:20:35.792Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nginx学习笔记（一）">
-<meta name="twitter:description" content="在Linux下安装Nginx1.在(Nginx官网)[]上下载压缩包。2.解压后进行安装">
+<meta name="twitter:description" content="在Linux下安装Nginx1.在(Nginx官网)[http://nginx.org/en/download.html]上下载压缩包。2.解压后进行安装">
 
 
 
@@ -245,7 +245,7 @@
   <div id="posts" class="posts-expand">
     
     
-      <h3 id="在Linux下安装Nginx"><a href="#在Linux下安装Nginx" class="headerlink" title="在Linux下安装Nginx"></a>在Linux下安装Nginx</h3><p>1.在(Nginx官网)[]上下载压缩包。<br>2.解压后进行安装<br><a id="more"></a></p>
+      <h3 id="在Linux下安装Nginx"><a href="#在Linux下安装Nginx" class="headerlink" title="在Linux下安装Nginx"></a>在Linux下安装Nginx</h3><p>1.在(Nginx官网)[<a href="http://nginx.org/en/download.html]上下载压缩包。" target="_blank" rel="external">http://nginx.org/en/download.html]上下载压缩包。</a><br>2.解压后进行安装<br><a id="more"></a></p>
 <pre><code>&gt; 在./configure的时候会报错
 &gt; ./configure: error: the HTTP rewrite module requires the PCRE library.
 &gt;  这时候我们需要在Linux上安装PCRE库
@@ -255,10 +255,12 @@
 &gt;  sudo apt-get install zlib1g-dev
 &gt;  再次编译，发现Nginx安装成功！
 </code></pre><h3 id="Nginx的启动，关闭命令"><a href="#Nginx的启动，关闭命令" class="headerlink" title="Nginx的启动，关闭命令"></a>Nginx的启动，关闭命令</h3><ol>
-<li><p>Nginx 启动命令</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/nginx/sbin/nginx -c /usr/<span class="built_in">local</span>/nginx/conf/nginx.conf</span><br></pre></td></tr></table></figure>
+<li>Nginx 启动命令</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/nginx/sbin/nginx -c /usr/<span class="built_in">local</span>/nginx/conf/nginx.conf</span><br></pre></td></tr></table></figure>
+<ol>
+<li>Nginx 关闭命令<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">kill</span> -QUIT PID</span><br></pre></td></tr></table></figure>
 </li>
-<li></li>
 </ol>
 
     
@@ -309,7 +311,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -317,7 +319,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>

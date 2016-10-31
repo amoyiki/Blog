@@ -73,5 +73,4 @@ $> touch aa.log # 创建aa.log文件(0字节)
 10 . Linux 查看进程
 ```bash
 ps -ef | grep nginx
->>>>>>> Stashed changes
 ```

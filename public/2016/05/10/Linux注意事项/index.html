@@ -110,7 +110,7 @@ unzip *.zip
 tar -cf all.tar *.jpg # -c新的包，f文件名
 
 tar -rf all.tar *.">
-<meta property="og:updated_time" content="2016-10-19T14:37:04.082Z">
+<meta property="og:updated_time" content="2016-10-26T02:21:36.373Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux注意事项">
 <meta name="twitter:description" content="下载、解压、执行 make make install wget 等命令需要在命令前加上sudo(PS：最好所有命令都加上)
@@ -321,7 +321,7 @@ tar -rf all.tar *.">
 </li>
 <li><p>Linux 软件安装步骤</p>
 <ol>
-<li>加载配置 <code>sudo ./cinfigure</code> <strong>注意：</strong>  在此命令后面添加<code>--prefix=...</code>可以指定安装路径，例如<code>sudo ./configure --prefix=/usr/local/python</code></li>
+<li>加载配置 <code>sudo ./configure</code> <strong>注意：</strong>  在此命令后面添加<code>--prefix=...</code>可以指定安装路径，例如<code>sudo ./configure --prefix=/usr/local/python</code></li>
 <li>编译 <code>sudo make</code></li>
 <li>安装 <code>sudo make install</code></li>
 </ol>
@@ -341,7 +341,16 @@ tar -rf all.tar *.">
 <p>E: Could not get lock /var/lib/apt/lists/lock<br>E: Could not get lock /var/lib/dpkg/lock<br>将这两个文件删除即可执行update命令</p>
 </blockquote>
 </li>
+<li><p>中断命令执行</p>
+<blockquote>
+<p>有时候命令执行到一半发现执行错误，或者命令执行时卡死。需要执行中断命令<br><code>Ctrl + z</code></p>
+</blockquote>
+</li>
+<li><p>创建文件夹或文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$&gt; mkdir aa <span class="comment"># 创建aa文件夹</span></span><br><span class="line">$&gt; touch aa.log <span class="comment"># 创建aa.log文件(0字节)</span></span><br></pre></td></tr></table></figure>
+</li>
 </ol>
+<p>10 . Linux 查看进程<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep nginx</span><br></pre></td></tr></table></figure></p>
 
     
   </div>
@@ -391,7 +400,7 @@ tar -rf all.tar *.">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -399,7 +408,7 @@ tar -rf all.tar *.">
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
