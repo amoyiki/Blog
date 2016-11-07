@@ -29,3 +29,10 @@ value = [v for v in a if v in b]
 ...
 value = [v for v in a if not v in b]
 ```
+
+## 日期 ##
+### datetime ###
+1. 获得今天时间凌晨，格式：'2016-11-02 00:00:00'
+```python
+now = datetime.datetime.today().replace(hour=0,minute=0,second=0,microsecond=0)
+```

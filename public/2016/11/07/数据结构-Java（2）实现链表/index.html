@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="この場合、" />
+  <meta name="keywords" content="学习," />
 
 
 
@@ -80,15 +80,16 @@
 
 
 
-<meta name="description" content="个人BLOG">
-<meta property="og:type" content="website">
-<meta property="og:title" content="四畳半神话大系">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta name="description" content="单向链表">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构--Java（2）实现链表">
+<meta property="og:url" content="http://yoursite.com/2016/11/07/数据结构-Java（2）实现链表/index.html">
 <meta property="og:site_name" content="四畳半神话大系">
-<meta property="og:description" content="个人BLOG">
+<meta property="og:description" content="单向链表">
+<meta property="og:updated_time" content="2016-11-07T08:37:05.523Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="四畳半神话大系">
-<meta name="twitter:description" content="个人BLOG">
+<meta name="twitter:title" content="数据结构--Java（2）实现链表">
+<meta name="twitter:description" content="单向链表">
 
 
 
@@ -106,7 +107,13 @@
   };
 </script>
 
-  <title> 归档 | 四畳半神话大系 </title>
+  <title>
+  
+
+  
+    数据结构--Java（2）实现链表 | 四畳半神话大系
+  
+</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -127,7 +134,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -235,218 +242,18 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 12 篇日志。 继续努力。
-    </span>
+  <div id="posts" class="posts-expand">
+    
+    
+      <h3 id="单向链表"><a href="#单向链表" class="headerlink" title="单向链表"></a>单向链表</h3><a id="more"></a>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * Created by Administrator on 2016-11-07.</span><br><span class="line"> */</span><br><span class="line">public class LinkedList &#123;</span><br><span class="line">    private class Node&#123;</span><br><span class="line">        private Node next;</span><br><span class="line">        private Object obj;</span><br><span class="line">        public Node(Object obj)&#123;</span><br><span class="line">            this.obj = obj;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Node first;</span><br><span class="line">    public int pos = 0;</span><br><span class="line">    public LinkedList()&#123;</span><br><span class="line">        this.first = null;</span><br><span class="line">    &#125;</span><br><span class="line">    public void addFirst(Object obj)&#123;</span><br><span class="line">        Node node = new Node(obj);</span><br><span class="line">        node.next = this.first;</span><br><span class="line">        this.first = node;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    public Object delFirst() throws Exception &#123;</span><br><span class="line">        if(isEmpty())&#123;</span><br><span class="line">            throw new Exception("This LinkedList is empty!");</span><br><span class="line">        &#125;</span><br><span class="line">        Node temp = this.first;</span><br><span class="line">        this.first = temp.next;</span><br><span class="line">        return temp.obj;</span><br><span class="line">    &#125;</span><br><span class="line">    public void add(int index, Object obj) throws Exception &#123;</span><br><span class="line">        if (isEmpty())&#123;</span><br><span class="line">            throw new Exception("This LinkedList is empty!");</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        Node node = new Node(obj);</span><br><span class="line">        Node cur = first;</span><br><span class="line">        Node pre = first;</span><br><span class="line">        while (index != pos)&#123;</span><br><span class="line">            pre = first;</span><br><span class="line">            cur = first.next;</span><br><span class="line">            pos++;</span><br><span class="line">        &#125;</span><br><span class="line">        node.next = cur;</span><br><span class="line">        pre.next = node;</span><br><span class="line">        pos = 0;</span><br><span class="line">    &#125;</span><br><span class="line">    public void remove(Object obj) throws Exception &#123;</span><br><span class="line">        if (isEmpty())&#123;</span><br><span class="line">            throw new Exception("This LinkedList is empty!");</span><br><span class="line">        &#125;</span><br><span class="line">        if (first.obj.equals(obj))&#123;</span><br><span class="line">            this.first = this.first.next;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            Node pre = this.first;</span><br><span class="line">            Node cur = this.first.next;</span><br><span class="line">            while (cur != null)&#123;</span><br><span class="line">                if (cur.obj.equals(obj))&#123;</span><br><span class="line">                    pre.next = cur.next;</span><br><span class="line">                    break;</span><br><span class="line">                &#125;</span><br><span class="line">                pre = cur;</span><br><span class="line">                cur = cur.next;</span><br><span class="line">            &#125;</span><br><span class="line">            if (cur == null)&#123;</span><br><span class="line">                throw new Exception("Not Found");</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Node find(Object obj) throws Exception &#123;</span><br><span class="line">        if (isEmpty())&#123;</span><br><span class="line">            throw new Exception("This LinkedList is empty!");</span><br><span class="line">        &#125;</span><br><span class="line">        Node cur = first;</span><br><span class="line">        while(cur != null)&#123;</span><br><span class="line">            if (cur.obj.equals(obj))&#123;</span><br><span class="line">                return cur;</span><br><span class="line">            &#125;</span><br><span class="line">            cur = cur.next;</span><br><span class="line">        &#125;</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line">    public boolean isEmpty()&#123;</span><br><span class="line">        return (first == null);</span><br><span class="line">    &#125;</span><br><span class="line">    public void display()&#123;</span><br><span class="line">        if(first == null)</span><br><span class="line">            System.out.println("empty");</span><br><span class="line">        Node cur = first;</span><br><span class="line">        while(cur != null)&#123;</span><br><span class="line">            System.out.print(cur.obj.toString() + " -&gt; ");</span><br><span class="line">            cur = cur.next;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.print("\n");</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) throws Exception &#123;</span><br><span class="line">        LinkedList ll = new LinkedList();</span><br><span class="line">        ll.addFirst(4);</span><br><span class="line">        ll.addFirst(3);</span><br><span class="line">        ll.addFirst(2);</span><br><span class="line">        ll.addFirst(1);</span><br><span class="line">        ll.display();</span><br><span class="line">        ll.delFirst();</span><br><span class="line">        ll.display();</span><br><span class="line">        ll.remove(3);</span><br><span class="line">        ll.display();</span><br><span class="line">        System.out.println(ll.find(1));</span><br><span class="line">        System.out.println(ll.find(4).obj);</span><br><span class="line">        ll.add(1,5);</span><br><span class="line">        ll.display();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>out</strong></p>
+<blockquote>
+<p>1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt;<br>2 -&gt; 3 -&gt; 4 -&gt;<br>2 -&gt; 4 -&gt;<br>null<br>4<br>2 -&gt; 5 -&gt; 4 -&gt; </p>
+</blockquote>
 
     
-
-      
-      
-      
-
-      
-        
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
-        </div>
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/11/07/数据结构-Java（2）实现链表/" itemprop="url">
-              
-                <span itemprop="name">数据结构--Java（2）实现链表</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-11-07T16:34:03+08:00"
-              content="2016-11-07" >
-          11-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/10/31/数据结构-Java（1）-实现Stack/" itemprop="url">
-              
-                <span itemprop="name">数据结构--Java（1） 实现Stack</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-10-31T15:59:38+08:00"
-              content="2016-10-31" >
-          10-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/10/16/Nginx学习笔记（一）/" itemprop="url">
-              
-                <span itemprop="name">Nginx学习笔记（一）</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-10-16T22:42:14+08:00"
-              content="2016-10-16" >
-          10-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/10/10/Python一些小技巧/" itemprop="url">
-              
-                <span itemprop="name">Python一些小技巧</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-10-10T15:31:11+08:00"
-              content="2016-10-10" >
-          10-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/08/24/编写简单的ORM/" itemprop="url">
-              
-                <span itemprop="name"> 编写简单的ORM</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-08-24T09:51:46+08:00"
-              content="2016-08-24" >
-          08-24
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><a class="extend next" rel="next" href="/archives/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
-
+  </div>
 
 
           </div>
@@ -454,6 +261,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/11/07/数据结构-Java（2）实现链表/"
+           data-title="数据结构--Java（2）实现链表" data-url="http://yoursite.com/2016/11/07/数据结构-Java（2）实现链表/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -681,12 +496,6 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
-
 
   
 
