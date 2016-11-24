@@ -70,7 +70,21 @@ $> mkdir aa # 创建aa文件夹
 $> touch aa.log # 创建aa.log文件(0字节)
 ```
 
-10 . Linux 查看进程
+10. Linux 查看进程
 ```bash
-ps -ef | grep nginx
+$> ps -ef | grep nginx 
+#nobody    4554  4553  0 15:50 ?        00:00:00 nginx: worker process 
+$> ps -e | grep nginx 
+#4553 ?        00:00:00 nginx
+```
+
+11. Linux 关闭防火墙
+```bash
+$> sudo ufw disable
+```
+
+12. 开机自启动服务
+```bash
+$> sudo vi /etc/rc.local
+# 在 exit 0 前添加所需自启动服务
 ```
