@@ -22,12 +22,16 @@ tags:
 ### Nginx的启动，关闭命令 ###
 1. Nginx 启动命令
 
-```bash
+```shell
 /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
 ```
 
 2. Nginx 关闭命令
-```bash
+```shell
 kill -QUIT PID
 ```
+
+3. 将Nginx写成服务运行
+如果每次都去执行`/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf`是非常麻烦的事。所以我们将Nginx的相关操作写成Bash脚本，就能像windows服务一样简单的几个命令就能完成任务。
+首先我们在网上Copy一份*[>>Ngnix脚本](http://github.com/amoyiki/Blog/raw/master/Document/nginx)*
 
