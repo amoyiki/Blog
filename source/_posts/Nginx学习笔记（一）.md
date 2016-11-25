@@ -6,8 +6,8 @@ tags:
 - 学习
 ---
 ### 在Linux下安装Nginx ###
-1.在(Nginx官网)[http://nginx.org/en/download.html]上下载压缩包。
-2.解压后进行安装
+1. 在(Nginx官网)[http://nginx.org/en/download.html]上下载压缩包。
+2. 解压后进行安装
 <!-- more -->
 
     > 在./configure的时候会报错
@@ -21,7 +21,6 @@ tags:
 
 ### Nginx的启动，关闭命令 ###
 1. Nginx 启动命令
-
 ```shell
 /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
 ```
@@ -34,4 +33,12 @@ kill -QUIT PID
 3. 将Nginx写成服务运行
 如果每次都去执行`/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf`是非常麻烦的事。所以我们将Nginx的相关操作写成Bash脚本，就能像windows服务一样简单的几个命令就能完成任务。
 首先我们在网上Copy一份*[>>Ngnix脚本](http://github.com/amoyiki/Blog/raw/master/Document/nginx)*
+然后在Linux执行命令
+```shell
+$> sudo wget http://github.com/amoyiki/Blog/raw/master/Document/nginx -O /etc/init.d/nginx
+$> sudo chmod +x /etc/init.d/nginx
+```
 
+现在我们就可以用简短的命令启动服务了
+
+> Usage: /etc/init.d/nginx {start|stop|restart|force-reload|reload|status|configtest|quietupgrade|terminate|destroy}
