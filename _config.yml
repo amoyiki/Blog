@@ -66,6 +66,16 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: next
 
+#baidu_analytics
+baidu_analytics: c3916ebb87080111f91966b1291316d7
+
+#local Search
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:

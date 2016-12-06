@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+    
+    <entry>
+      <title><![CDATA[Java垃圾回收]]></title>
+      <url>%2F2016%2F12%2F06%2FJava%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%2F</url>
+      <content type="text"><![CDATA[GC 如何判断对象可以被回收引用计数算法早期Java使用的算法，现已不用。 可达性分析算法以GC Root 作为起始点，向下搜索。走过的路径成为引用链。当一个对象到GC Root没有任何引用链相连时，证明对象不可用。Java的GC Root对象包括： 虚拟机栈（栈帧中的本地变量表中引用对象） 方法区中类静态属性引用对象 方法区常量引用对象 本地方法JNI引用对象]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[[LeetCode]463. Island Perimeter]]></title>
+      <url>%2F2016%2F11%2F23%2FLeetCode-463-Island-Perimeter%2F</url>
+      <content type="text"><![CDATA[问题描述给定一个二维地图，1表示陆地，0表示水域。每一个陆地是边长为1的正方形。求岛屿的周长。 解题思路每个格子周长为4，两个格子相邻时周长-2 具体代码 python 1234567891011121314class Solution(object): def islandPerimeter(self, grid): ans = 0 h = len(grid) w = len(grid[0]) if h else 0 for x in range(h): for y in range(w): if grid[x][y] == 1: ans += 4 if x &gt; 0 and grid[x-1][y]: ans -= 2 if y &gt; 0 and grid[x][y-1]: ans -= 2 return ans Java 1234567891011121314151617public class Solution &#123; public int islandPerimeter(int[][] grid) &#123; int ans = 0; int h = g.length; int w = g[0].length; for(int i=0;i&lt;h;i++)&#123; for (int j=0;j&lt;w;j++)&#123; if (g[i][j] == 1)&#123; ans += 4; if(i &gt; 0 &amp;&amp; g[i-1][j] == 1) ans -= 2; if(j &gt; 0 &amp;&amp; g[i][j-1] == 1) ans -= 2; &#125; &#125; &#125; return ans &#125;&#125;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[[LeetCode]217. Contains Duplicate]]></title>
+      <url>%2F2016%2F11%2F10%2FLeetCode-217-Contains-Duplicate%2F</url>
+      <content type="text"><![CDATA[问题描述给定一个整数数组，判断是否包含重复元素，是返回true。若都是唯一返回false 解题思路具体代码 python]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[[LeetCode]453.Minimum Moves to Equal Array Elements]]></title>
+      <url>%2F2016%2F11%2F09%2FLeetCode-453-Minimum-Moves-to-Equal-Array-Elements%2F</url>
+      <content type="text"><![CDATA[问题描述给定一个长度为n的非空数字数组，每次对n-1个加1。求所有元素值相等，需要几次操作。 解题思路//todo: 插入gif图操作次数 = 数组总和 - 数组中最小的数*数组长度 具体代码 python 123class Solution(object): def minMoves(self, nums): return sum(nums) - min(nums)*len(nums) java 1234567891011public class Solution &#123; public int minMoves(int[] nums) &#123; int min = nums[0]; int sum = 0; for(int i: nums)&#123; min = Math.min(min,i); sum +=i; &#125; return sum - min*nums.length; &#125;&#125;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[[LeetCode]409.Longest Palindrome]]></title>
+      <url>%2F2016%2F11%2F09%2FLeetCode-409-Longest-Palindrome%2F</url>
+      <content type="text"><![CDATA[问题描述求一串字符串最大的回文子字符串长度注意：1.大小写敏感.2.默认字符串全大写或全小写 解题思路偶数字符个数累加；奇数字符个数先减一再累加，同时计算奇数个数。最后如果奇数个数大于0，累加结果再加1。 具体代码 python 12345678910class Solution(object): def longestPalindrome(self, s): ans = odd = 0 count = collections.Counter(s) for i in count: ans += count[i] if count[i] % 2 == 1: ans -= 1 odd += 1 return ans + (odd &gt; 0) Java 1234567891011121314class Soultion &#123; public int longestPalindrome(String s) &#123; int len = 0; boolean[] map = new boolean[128]; for(char c : s.toCharArray())&#123; map[c] = !map[c];//将有字符的位置由false变成true //如果该位置为false的话证明有偶数个数存在 if(!map[c]) len += 2; &#125; //如果字符串长度大于已累计长度，添加一个元素放在回文字符串中间 if (len &lt; s.length())len++; return len; &#125;&#125;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[数据结构--Java（2）实现链表]]></title>
+      <url>%2F2016%2F11%2F07%2F%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-Java%EF%BC%882%EF%BC%89%E5%AE%9E%E7%8E%B0%E9%93%BE%E8%A1%A8%2F</url>
+      <content type="text"><![CDATA[单向链表 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116/** * Created by Administrator on 2016-11-07. */public class LinkedList &#123; private class Node&#123; private Node next; private Object obj; public Node(Object obj)&#123; this.obj = obj; &#125; &#125; public Node first; public int pos = 0; public LinkedList()&#123; this.first = null; &#125; public void addFirst(Object obj)&#123; Node node = new Node(obj); node.next = this.first; this.first = node; &#125; public Object delFirst() throws Exception &#123; if(isEmpty())&#123; throw new Exception("This LinkedList is empty!"); &#125; Node temp = this.first; this.first = temp.next; return temp.obj; &#125; public void add(int index, Object obj) throws Exception &#123; if (isEmpty())&#123; throw new Exception("This LinkedList is empty!"); &#125; Node node = new Node(obj); Node cur = first; Node pre = first; while (index != pos)&#123; pre = first; cur = first.next; pos++; &#125; node.next = cur; pre.next = node; pos = 0; &#125; public void remove(Object obj) throws Exception &#123; if (isEmpty())&#123; throw new Exception("This LinkedList is empty!"); &#125; if (first.obj.equals(obj))&#123; this.first = this.first.next; &#125;else&#123; Node pre = this.first; Node cur = this.first.next; while (cur != null)&#123; if (cur.obj.equals(obj))&#123; pre.next = cur.next; break; &#125; pre = cur; cur = cur.next; &#125; if (cur == null)&#123; throw new Exception("Not Found"); &#125; &#125; &#125; public Node find(Object obj) throws Exception &#123; if (isEmpty())&#123; throw new Exception("This LinkedList is empty!"); &#125; Node cur = first; while(cur != null)&#123; if (cur.obj.equals(obj))&#123; return cur; &#125; cur = cur.next; &#125; return null; &#125; public boolean isEmpty()&#123; return (first == null); &#125; public void display()&#123; if(first == null) System.out.println("empty"); Node cur = first; while(cur != null)&#123; System.out.print(cur.obj.toString() + " -&gt; "); cur = cur.next; &#125; System.out.print("\n"); &#125; public static void main(String[] args) throws Exception &#123; LinkedList ll = new LinkedList(); ll.addFirst(4); ll.addFirst(3); ll.addFirst(2); ll.addFirst(1); ll.display(); ll.delFirst(); ll.display(); ll.remove(3); ll.display(); System.out.println(ll.find(1)); System.out.println(ll.find(4).obj); ll.add(1,5); ll.display(); &#125;&#125; out 1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt;2 -&gt; 3 -&gt; 4 -&gt;2 -&gt; 4 -&gt;null42 -&gt; 5 -&gt; 4 -&gt;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[数据结构--Java（1） 实现Stack]]></title>
+      <url>%2F2016%2F10%2F31%2F%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-Java%EF%BC%881%EF%BC%89-%E5%AE%9E%E7%8E%B0Stack%2F</url>
+      <content type="text"><![CDATA[利用数组实现Stack 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112public class ArrayStack&lt;T&gt; implements StackADT&lt;T&gt; &#123; private final int DEFAULT_SIZE=2;//默认大小 private int capacity;//栈容量 private int size;//栈大小 private int top; private Object[] array; public ArrayStack()&#123; this.capacity = DEFAULT_SIZE; this.array = new Object[this.capacity]; this.size = 0; System.out.println(top); &#125; public ArrayStack(int capacity)&#123; this.capacity = capacity; this.array = new Object[this.capacity]; this.size = 0; &#125; @Override public void clear() &#123; Arrays.fill(this.array,null); this.size = 0; this.top = 0; this.capacity = DEFAULT_SIZE; this.array = new Object[this.capacity]; &#125; @Override public boolean isEmpty() &#123; return this.size == 0; &#125; @Override public T peek() &#123; if (isEmpty())&#123; return null; &#125; return (T) this.array[this.top-1]; &#125; @Override public T pop() &#123; T v = (T) this.array[top-1]; array[this.top-1] = null; this.top = this.top - 1; this.size--; return v; &#125; @Override public void push(T v) &#123; if (this.size&lt;this.capacity)&#123; this.array[top] = v; this.size++; this.top++; &#125;else &#123; addStackCap(); push(v); &#125; &#125; private void addStackCap() &#123;//扩容 this.capacity = this.capacity+DEFAULT_SIZE; Object[] newArray = new Object[this.capacity]; System.arraycopy(this.array, 0, newArray, 0,this.array.length); Arrays.fill(array, null);//原来的数组置空 this.array = newArray; &#125; @Override public int size() &#123; return this.size; &#125; /** * 测试栈 * @param args */ public static void main(String[] args) &#123; ArrayStack&lt;Integer&gt; a = new ArrayStack&lt;Integer&gt;(); a.push(3); a.push(5); a.push(2); a.push(1); a.push(6); System.out.println("栈大小:"+a.size()); System.out.println("栈容量:"+a.capacity); System.out.println("栈顶元素:"+a.peek()); while (!a.isEmpty())&#123; System.out.println(a.pop()); &#125; System.out.println("栈大小:"+a.size()); System.out.println("栈容量:"+a.capacity); System.out.println("栈顶元素:"+a.peek()); System.out.println("************"); a.clear(); System.out.println("栈大小:"+a.size()); System.out.println("栈容量:"+a.capacity); &#125;&#125;interface StackADT&lt;T&gt; &#123; public void clear(); public boolean isEmpty(); public T peek(); public T pop(); public void push(T v); public int size();&#125; 利用LinkedList实现Stack1234567891011121314151617181920212223242526272829303132public class Stack&lt;T&gt; &#123; private LinkedList&lt;T&gt; storage = new LinkedList&lt;T&gt;(); /** 入栈 **/ public void push(T v)&#123; storage.addFirst(v); &#125; /** 出栈 **/ public T pop()&#123; if(isEmpty()) return null; return storage.removeFirst(); &#125; /** 栈为空 **/ public boolean isEmpty() &#123; return storage.isEmpty(); &#125; public String toString()&#123; return storage.toString(); &#125; public void clear()&#123; storage.clear(); &#125; public static void main(String[] args) &#123; Stack stack = new Stack&lt;String&gt;(); stack.push("a"); stack.push("b"); stack.push("c"); System.out.println(stack.toString()); Object obj = stack.pop(); System.out.println(obj+"------"+stack.toString()); obj = stack.pop(); obj = stack.pop(); System.out.println(obj); &#125;&#125;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Nginx学习笔记（一）]]></title>
+      <url>%2F2016%2F10%2F16%2FNginx%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%2F</url>
+      <content type="text"><![CDATA[在Linux下安装Nginx 在(Nginx官网)[http://nginx.org/en/download.html]上下载压缩包。 解压后进行安装 在./configure的时候会报错./configure: error: the HTTP rewrite module requires the PCRE library. 这时候我们需要在Linux上安装PCRE库 sudo apt-get update sudo apt-get install libpcre3 libpcre3-dev 再次编译，发现又报了缺少zlib library，我们再次照葫芦画瓢安装zlib sudo apt-get install zlib1g-dev 再次编译，发现Nginx安装成功！ Nginx的启动，关闭命令 Nginx 启动命令 1/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf Nginx 关闭命令 1kill -QUIT PID 将Nginx写成服务运行如果每次都去执行/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf是非常麻烦的事。所以我们将Nginx的相关操作写成Bash脚本，就能像windows服务一样简单的几个命令就能完成任务。首先我们在网上Copy一份&gt;&gt;Ngnix脚本然后在Linux执行命令 12$&gt; sudo wget http://github.com/amoyiki/Blog/raw/master/Document/nginx -O /etc/init.d/nginx$&gt; sudo chmod +x /etc/init.d/nginx 现在我们就可以用简短的命令启动服务了 Usage: /etc/init.d/nginx {start|stop|restart|force-reload|reload|status|configtest|quietupgrade|terminate|destroy}]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Python一些小技巧]]></title>
+      <url>%2F2016%2F10%2F10%2FPython%E4%B8%80%E4%BA%9B%E5%B0%8F%E6%8A%80%E5%B7%A7%2F</url>
+      <content type="text"><![CDATA[列表排序 列表和字典的混合排序 12persons = [&#123;'name':'zhang3','age':15&#125;,&#123;'name':'li4','age':12&#125;]persons.sort(lambda a,b:a['age']-b['age']) # 按照年龄排序 两个列表的差异 交集 123a = [1,2,3]b = [2,3,4]value = [v for v in a if v in b] 差集 12...value = [v for v in a if not v in b] 日期datetime 获得今天时间凌晨，格式：’2016-11-02 00:00:00’1now = datetime.datetime.today().replace(hour=0,minute=0,second=0,microsecond=0)]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[编写简单的ORM]]></title>
+      <url>%2F2016%2F08%2F24%2F%E7%BC%96%E5%86%99%E7%AE%80%E5%8D%95%E7%9A%84ORM%2F</url>
+      <content type="text"><![CDATA[最近在跟着廖雪峰的python3教程，把学习的过程记录下来。日后好反复翻阅 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465class Field(object): def __init__(self, name, colum_type): self.name = name self.column_type = colum_type def __str__(self): return '&lt;%s : %s&gt;' % (self.__class__.__name__, self.name)class StringField(Field): def __init__(self, name): super(StringField, self).__init__(name, 'varchar(100)')class IntegerField(Field): def __init__(self, name): super(IntegerField, self).__init__(name, 'bigint')class ModelMetaclass(type): def __new__(cls, name, bases, attrs): if name == 'Model': return type.__new__(cls, name, bases, attrs) print("Found model: %s" % name) mappings = dict() for k, v in attrs.items(): if isinstance(v, Field): print("Found mapping: %s ==&gt; %s" % (k, v)) mappings[k] = v for k in mappings.keys(): attrs.pop(k) attrs['__mappings__'] = mappings # 保存属性和映射关系 attrs['__table__'] = name # 表明与类名一致 return type.__new__(cls, name, bases, attrs)class Model(dict, metaclass=ModelMetaclass): def __init__(self, **kw): super(Model, self).__init__(**kw) def __getattr__(self, key): try: return self[key] except KeyError: raise AttributeError(r"'Model' object has no attribute '%s' " % key) def __setattr__(self, key, value): self[key] = value def save(self): fields = [] params = [] args = [] for k, v in self.__mappings__.items(): fields.append(v.name) params.append("?") args.append(getattr(self, k, None)) print('='.join(['name', 'iki'])) sql = "INSERT INTO %s (%s) VALUES (%s)" % (self.__table__, ','.join(fields), ','.join(params)) print('SQL: %s' % sql) print('ARGS: %s' % str(args)) def update(self): pass 12345678910111213141516171819class User(Model): # 定义类的属性到列的映射： id = IntegerField('id') name = StringField('username') email = StringField('email') password = StringField('password')u = User(id=12345, name='Michael', email='test@orm.org', password='my-pwd')u.save()[OUTPUT]Found model: UserFound mapping: id ==&gt; &lt;IntegerField : id&gt;Found mapping: name ==&gt; &lt;StringField : username&gt;Found mapping: email ==&gt; &lt;StringField : email&gt;Found mapping: password ==&gt; &lt;StringField : password&gt;SQL: INSERT INTO User (username,id,email,password) VALUES (?,?,?,?)ARGS: ['Michael', 12345, 'test@orm.org', 'my-pwd'] 本段代码是照着廖雪峰python3教程敲得，后续会补充一些理解和扩展该代码]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[SQL 生成10万条测试数据]]></title>
+      <url>%2F2016%2F08%2F18%2FSQL-%E7%94%9F%E6%88%9010%E4%B8%87%E6%9D%A1%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE%2F</url>
+      <content type="text"><![CDATA[循环插入10万条测试数据12345678declare @i intset @i=1while @i&lt;100000begin insert into test(title,date_time) values('test'+cast(@i as ncahr(10)),getdate()) set @i=@i+1endgo 注意: cast()函数是强制类型转换与convert()用法一致 declare 用于声明变量]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[零碎的小技巧]]></title>
+      <url>%2F2016%2F08%2F05%2F%E9%9B%B6%E7%A2%8E%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7%2F</url>
+      <content type="text"><![CDATA[如何科学上网作为一名折腾的人，一名苦逼搬砖程序员，最不能缺少的就是和世界接轨。如果不去了解国外的技术发展，就没有办法提升自身的技术水平。所以，科学上网是一个程序员应该有的基础能力。这里简单的介绍一下目前我使用的科学上网工具。 vpn代理这个是最常见，最简单的方法。VPN软件也是多的数不胜数。目前我有在使用的是有两款，都是免费的（说到底还是因为穷）。一款是Lantern，另外一款是赛风。 更改Host这个方法只能浏览一些特定的网站，而且网速也是时好时坏。但是，对于只简单的想使用Google相关网站，还是很好用的。因为Host的IP经常会ban掉，所以需要经常更新一下。更新Host地址 Chrome Google 首页及默认搜索设置在成功的科学上网后，如果用的是Chrome的话，还可以设置下图操作，利用Https防止链接被和谐。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Vim使用技巧]]></title>
+      <url>%2F2016%2F05%2F19%2Fvim%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%2F</url>
+      <content type="text"><![CDATA[最近在学习Linux操作系统，顺带的把Vim也稍微的学了一下。下面记录一些常用的Vim操作命令。 Vim移动命令 k,j,h,l 分别是移动光标：上下左右 Ctrl + b / Ctrl + f 分别是上翻一页，下翻一页 gg 移动到文档首 G 移动到文档末]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[SQL 中Group by 的使用]]></title>
+      <url>%2F2016%2F05%2F11%2FSQL%20%E4%B8%ADGroup%20by%20%E7%9A%84%E4%BD%BF%E7%94%A8%2F</url>
+      <content type="text"><![CDATA[在多表查询中使用Group by 有三张表，一张是部门表-dept，一张是餐厅表-dinner，还有一张是员工消费明细表-cost(含餐厅、部门外键)现在需要一张报表，需求如下: 部门名称 餐厅名称 消费总次数 消费总金额 部门1 餐厅1 2000 20000 部门1 餐厅2 2000 20000 部门2 餐厅1 2000 20000 12345select dept.deptname,dinner.name,cost1.countsum,cost2.money from cost as c left join (select dining_id,dept_id,count(*) as countsum from cost group by dining_id,dept_id) as c1 on c1.dining_id = c.dining_id and c1.dept_id=c.dept_idleft join (select dining_id,dept_id,sum(money) as money from cost group by dining_id,dept_id) as c2 on c2.dining_id = c.dining_id and c2.dept_id=ic.dept_idleft join dinner as d on d.id= c.dining_idleft join dept as dept on dept.deptid= c.dept_id ; 注意： 当使用group by时，select 指定的字段要么作为分组分组依据，写在group by 后边，要吗已经被包含在聚合函数中。如果不是这两种情况的话会跳出错误： 选择列表中的列 ‘xxx’ 无效，因为该列没有包含在聚合函数或 GROUP BY 子句中。]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Linux注意事项]]></title>
+      <url>%2F2016%2F05%2F10%2FLinux%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%2F</url>
+      <content type="text"><![CDATA[下载、解压、执行 make make install wget 等命令需要在命令前加上sudo(PS：最好所有命令都加上) 解压与压缩命令 解压命令： tar -zxvf *.tar.gz tar -xvf *.tar unrar e *.rar unzip *.zip 压缩命令： tar -cf all.tar *.jpg # -c新的包，f文件名 tar -rf all.tar *.gif # -r新增加 列出all中所有文件 tar -tf all.tar 切换命令/图形界面 切换成命令界面（暂时） Ctrl+Alt+空格 Ctrl+Alt+F1~F6 切换成命令模式（永久） $&gt;echo “false” | sudo tee /etc/X11/default-display-manager 然后重启Ubuntu 切换成图形界面（暂时） startx 切换成图形界面（永久） $&gt;echo “/usr/sbin/gdm” | sudo tee /etc/X11/default-display-manager Linux 软件安装步骤 加载配置 sudo ./configure 注意： 在此命令后面添加--prefix=...可以指定安装路径，例如sudo ./configure --prefix=/usr/local/python 编译 sudo make 安装 sudo make install Linux 清屏命令 $ clear 保留历史记录，将页面下翻一页而已 $ reset 真正意义上的清空界面 Linux 更改计算机名 $ sudo vim /etc/hostname将第一行改为你想要的名字 Ubuntu apt-get update失败 E: Could not get lock /var/lib/apt/lists/lockE: Could not get lock /var/lib/dpkg/lock将这两个文件删除即可执行update命令 中断命令执行 有时候命令执行到一半发现执行错误，或者命令执行时卡死。需要执行中断命令Ctrl + z 创建文件夹或文件 12$&gt; mkdir aa # 创建aa文件夹$&gt; touch aa.log # 创建aa.log文件(0字节) Linux 查看进程 1234$&gt; ps -ef | grep nginx #nobody 4554 4553 0 15:50 ? 00:00:00 nginx: worker process $&gt; ps -e | grep nginx #4553 ? 00:00:00 nginx Linux 关闭防火墙 1$&gt; sudo ufw disable 开机自启动服务 12$&gt; sudo vi /etc/rc.local# 在 exit 0 前添加所需自启动服务 安装ssh服务 1$&gt; sudo apt-get install openssh-server]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[windows 下使用Virtualenv 管理Python项目]]></title>
+      <url>%2F2016%2F05%2F09%2Fwindows-%E4%B8%8B%E4%BD%BF%E7%94%A8Virtualenv-%E7%AE%A1%E7%90%86Python%E9%A1%B9%E7%9B%AE%2F</url>
+      <content type="text"><![CDATA[为什么使用virtualenv我们在使用python时可能会遇到在一台电脑同时装不同的版本Python或者装不同版本的第三方依赖。这时候就可以用virtualenv来隔绝项目之间第三方依赖。此外，virtualenv还可以把开发环境打包。一键部署到其他地方。 windows 环境安装virtualenv先决条件： 已经安装Python 已经安装pip或easy_install 安装virtual（假定按在D:\env文件夹下）12D:\env&gt; pip install virtualenvD:\env&gt; pip install virtualenvwrapper 创建一个虚拟环境123D:\env&gt; mkvirtualenv envNew python executable in D:\workspace\env1\Scripts\python.exeInstalling setuptools, pip, wheel...done. 创建完成后我们可以使用lsvirtualenv查看已经创建的虚拟环境 12345D:\env&gt;lsvirtualenvdir /b /ad "D:\env"========================================env 可以利用workon 虚拟环境名字来切环境 常用操作 激活虚拟环境 workon env 退出虚拟环境deactivate 查看当前虚拟环境安装的所有软件包pip list 结束那么，愉快的用pip去装各种各样的依赖包吧！]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[新的开始]]></title>
+      <url>%2F2016%2F05%2F01%2F%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8B%2F</url>
+      <content type="text"><![CDATA[新的开始，建立在曾经的废墟之上说来也是怪我自己脑子太二，在之前笔记本电脑内的Blog源文件没有备份就将电脑重装系统，结果就是之前的所有文章都消失得一干二净，虽然不是什么重要的文章，但毕竟是自己花心思写下的经验，丢了还是觉得蛮可惜的。所以这一次，我老老实实在GitHub上新开一个repository放我的hexo文件。以后每写一篇文章，就都要把源文件上传一次，妈妈再也不用担心换电脑没法继续写Blog了，顺带还能熟悉一些git命令，岂不美哉。 既然开了一篇杂谈，那我就再说说找工作的事吧虽然没人看，但是我还是记录一下大四找工作的一些经历和体会，以后回顾的时候也能在心里啐一句：当初怎么跟个傻子似的。 想开始找工作是在大四上的时候，虽然那个时候周围的同学都还在重复过着悠闲自在的大学生活，但是我比较杞人忧天，或许是在知乎逛多了，感觉其他大学生都屌的不行，而我以前也从未有过去实习的经历，如果还不趁着秋招公司多，到毕业时想找恐怕就难了。开始写简历的时候才发现，自己这四年来好像没什么好写的，一来学习成绩不怎么样，再来自己也没有参与过什么软件项目的开发，简直就只能白纸一张。想了好几个晚上，把自己大三开始所有写过的代码捋了一遍，挑了三个称的上开发的项目，然后一顿瞎掰开发过程。总算勉勉强强凑成了一页。接下来就是不断的参加校招，不断的递简历，不断的参加笔试面试。参加了几个比较有名的公司的校招，有的递完简历就了无音讯，有的参加完笔试就知道没机会了。不过在不断失败中，我还是攒到了一些经验，会针对面试公司可能出的问题进行复习。功夫不负有心人，虽然大公司一家都没有消息，不过海投中的一些小公司还是有给我回信。陆陆续续的面试了好几个公司，从一开始自我介绍就会声音就会发抖，到后面稍微从容的跟面试官聊一聊人生。这样的进步我觉得比我拿到offer更值得高兴。然后，我也收到了五个左右的offer，包括初创，电商，软件等公司，虽然大家都说在初创公司会得到很好的锻炼，但是我对自身技术水平还是不自信，怕到了初创公司会处于拖后腿的地位，考虑了很久，选择了一件面向企业的软件公司。工作了差不多4月，现在我也慢慢进入了社会人的角色。现在这个公司工作量不算太大，给的工资也说的过去。不过，工作内容不是自己期待中呢那样。所以，我开始思考一年以后，我该何去何从。 对未来的展望说完当下现状，就该想想以后的发展目标了。现在这个公司实在太过安逸了，每天要么处理客户问题，要么做一些重复的软件二次开发，要么就发发呆。这样让我开始担忧我的技术水平能不能在这一年有所提高，还是会比在学校更糟糕，每天下班回来基本不会再看技术书，不会在家里写一行代码。而且岗位本身就不是一个单纯的开发岗位，更像一个售后技术人员和软件定制开发人员的结合。公司同个技术小组同事虽然都很好，但是没有技术的交流，没有共同开发，大家各干各的活，这点让我很是失望。所以，我开始考虑明年跳槽，下一份工作，我决定去上海发展，在我们这个二流城市，互联网公司还是太少。机会感觉也不多。所以想去上海看看会不会有更多的机会。同时，我开始了前期的准备工作。现在做的python开发，之前在学校学的java基本上也忘了差不多，而python我也没有很深的了解，这个状态肯定无法跳槽。所以，我开始重新捡起书籍，为明年而奋斗！！]]></content>
+    </entry>
+
+    
+  
+  
+</search>
