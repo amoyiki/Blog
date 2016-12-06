@@ -80,16 +80,22 @@
 
 
 
-<meta name="description" content="在Linux下安装Nginx1.在(Nginx官网)[http://nginx.org/en/download.html]上下载压缩包。2.解压后进行安装">
+<meta name="description" content="在Linux下安装Nginx
+在(Nginx官网)[http://nginx.org/en/download.html]上下载压缩包。
+解压后进行安装">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Nginx学习笔记（一）">
 <meta property="og:url" content="http://yoursite.com/2016/10/16/Nginx学习笔记（一）/index.html">
 <meta property="og:site_name" content="四畳半神话大系">
-<meta property="og:description" content="在Linux下安装Nginx1.在(Nginx官网)[http://nginx.org/en/download.html]上下载压缩包。2.解压后进行安装">
-<meta property="og:updated_time" content="2016-10-26T02:20:35.792Z">
+<meta property="og:description" content="在Linux下安装Nginx
+在(Nginx官网)[http://nginx.org/en/download.html]上下载压缩包。
+解压后进行安装">
+<meta property="og:updated_time" content="2016-11-25T08:58:18.302Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nginx学习笔记（一）">
-<meta name="twitter:description" content="在Linux下安装Nginx1.在(Nginx官网)[http://nginx.org/en/download.html]上下载压缩包。2.解压后进行安装">
+<meta name="twitter:description" content="在Linux下安装Nginx
+在(Nginx官网)[http://nginx.org/en/download.html]上下载压缩包。
+解压后进行安装">
 
 
 
@@ -245,23 +251,30 @@
   <div id="posts" class="posts-expand">
     
     
-      <h3 id="在Linux下安装Nginx"><a href="#在Linux下安装Nginx" class="headerlink" title="在Linux下安装Nginx"></a>在Linux下安装Nginx</h3><p>1.在(Nginx官网)[<a href="http://nginx.org/en/download.html]上下载压缩包。" target="_blank" rel="external">http://nginx.org/en/download.html]上下载压缩包。</a><br>2.解压后进行安装<br><a id="more"></a></p>
-<pre><code>&gt; 在./configure的时候会报错
-&gt; ./configure: error: the HTTP rewrite module requires the PCRE library.
-&gt;  这时候我们需要在Linux上安装PCRE库
-&gt;  sudo apt-get update
-&gt;  sudo apt-get install libpcre3 libpcre3-dev
-&gt;  再次编译，发现又报了缺少zlib library，我们再次照葫芦画瓢安装zlib
-&gt;  sudo apt-get install zlib1g-dev
-&gt;  再次编译，发现Nginx安装成功！
-</code></pre><h3 id="Nginx的启动，关闭命令"><a href="#Nginx的启动，关闭命令" class="headerlink" title="Nginx的启动，关闭命令"></a>Nginx的启动，关闭命令</h3><ol>
-<li>Nginx 启动命令</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/nginx/sbin/nginx -c /usr/<span class="built_in">local</span>/nginx/conf/nginx.conf</span><br></pre></td></tr></table></figure>
-<ol>
-<li>Nginx 关闭命令<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">kill</span> -QUIT PID</span><br></pre></td></tr></table></figure>
+      <h3 id="在Linux下安装Nginx"><a href="#在Linux下安装Nginx" class="headerlink" title="在Linux下安装Nginx"></a>在Linux下安装Nginx</h3><ol>
+<li>在(Nginx官网)[<a href="http://nginx.org/en/download.html]上下载压缩包。" target="_blank" rel="external">http://nginx.org/en/download.html]上下载压缩包。</a></li>
+<li><p>解压后进行安装</p>
+<a id="more"></a>
+<blockquote>
+<p>在./configure的时候会报错<br>./configure: error: the HTTP rewrite module requires the PCRE library.<br> 这时候我们需要在Linux上安装PCRE库<br> sudo apt-get update<br> sudo apt-get install libpcre3 libpcre3-dev<br> 再次编译，发现又报了缺少zlib library，我们再次照葫芦画瓢安装zlib<br> sudo apt-get install zlib1g-dev<br> 再次编译，发现Nginx安装成功！</p>
+</blockquote>
 </li>
 </ol>
+<h3 id="Nginx的启动，关闭命令"><a href="#Nginx的启动，关闭命令" class="headerlink" title="Nginx的启动，关闭命令"></a>Nginx的启动，关闭命令</h3><ol>
+<li><p>Nginx 启动命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Nginx 关闭命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kill -QUIT PID</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将Nginx写成服务运行<br>如果每次都去执行<code>/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf</code>是非常麻烦的事。所以我们将Nginx的相关操作写成Bash脚本，就能像windows服务一样简单的几个命令就能完成任务。<br>首先我们在网上Copy一份<em><a href="http://github.com/amoyiki/Blog/raw/master/Document/nginx" target="_blank" rel="external">&gt;&gt;Ngnix脚本</a></em><br>然后在Linux执行命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$&gt; sudo wget http://github.com/amoyiki/Blog/raw/master/Document/nginx -O /etc/init.d/nginx</span><br><span class="line">$&gt; sudo chmod +x /etc/init.d/nginx</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>现在我们就可以用简短的命令启动服务了</p>
+<blockquote>
+<p>Usage: /etc/init.d/nginx {start|stop|restart|force-reload|reload|status|configtest|quietupgrade|terminate|destroy}</p>
+</blockquote>
 
     
   </div>
@@ -311,7 +324,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-count">16</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

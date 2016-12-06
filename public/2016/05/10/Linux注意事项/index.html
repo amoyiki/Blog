@@ -110,7 +110,7 @@ unzip *.zip
 tar -cf all.tar *.jpg # -c新的包，f文件名
 
 tar -rf all.tar *.">
-<meta property="og:updated_time" content="2016-10-26T02:21:36.373Z">
+<meta property="og:updated_time" content="2016-11-21T09:46:20.560Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux注意事项">
 <meta name="twitter:description" content="下载、解压、执行 make make install wget 等命令需要在命令前加上sudo(PS：最好所有命令都加上)
@@ -349,8 +349,16 @@ tar -rf all.tar *.">
 <li><p>创建文件夹或文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$&gt; mkdir aa <span class="comment"># 创建aa文件夹</span></span><br><span class="line">$&gt; touch aa.log <span class="comment"># 创建aa.log文件(0字节)</span></span><br></pre></td></tr></table></figure>
 </li>
+<li><p>Linux 查看进程</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$&gt; ps -ef | grep nginx </span><br><span class="line"><span class="comment">#nobody    4554  4553  0 15:50 ?        00:00:00 nginx: worker process </span></span><br><span class="line">$&gt; ps <span class="_">-e</span> | grep nginx </span><br><span class="line"><span class="comment">#4553 ?        00:00:00 nginx</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Linux 关闭防火墙</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$&gt; sudo ufw <span class="built_in">disable</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>开机自启动服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$&gt; sudo vi /etc/rc.local</span><br><span class="line"><span class="comment"># 在 exit 0 前添加所需自启动服务</span></span><br></pre></td></tr></table></figure>
+</li>
 </ol>
-<p>10 . Linux 查看进程<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep nginx</span><br></pre></td></tr></table></figure></p>
 
     
   </div>
@@ -400,7 +408,7 @@ tar -rf all.tar *.">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-count">16</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

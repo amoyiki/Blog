@@ -88,3 +88,8 @@ $> sudo ufw disable
 $> sudo vi /etc/rc.local
 # 在 exit 0 前添加所需自启动服务
 ```
+
+13. 安装ssh服务
+```bash
+$> sudo apt-get install openssh-server
+```

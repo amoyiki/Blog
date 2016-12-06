@@ -86,7 +86,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/11/09/LeetCode-409-Longest-Palindrome/index.html">
 <meta property="og:site_name" content="四畳半神话大系">
 <meta property="og:description" content="问题描述求一串字符串最大的回文子字符串长度">
-<meta property="og:updated_time" content="2016-11-09T03:12:37.980Z">
+<meta property="og:updated_time" content="2016-11-25T08:24:02.763Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[LeetCode]409.Longest Palindrome">
 <meta name="twitter:description" content="问题描述求一串字符串最大的回文子字符串长度">
@@ -245,8 +245,7 @@
   <div id="posts" class="posts-expand">
     
     
-      <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>求一串字符串最大的回文子字符串长度<br><a id="more"></a><br><strong>注意：</strong></p>
-<p>1.大小写敏感.<br>2.默认字符串全大写或全小写</p>
+      <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>求一串字符串最大的回文子字符串长度<br><a id="more"></a><br><strong>注意：</strong><br>1.大小写敏感.<br>2.默认字符串全大写或全小写</p>
 <h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>偶数字符个数累加；奇数字符个数先减一再累加，同时计算奇数个数。<br>最后如果奇数个数大于0，累加结果再加1。</p>
 <h3 id="具体代码"><a href="#具体代码" class="headerlink" title="具体代码"></a>具体代码</h3><blockquote>
 <p>python</p>
@@ -255,7 +254,7 @@
 <blockquote>
 <p>Java</p>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Soultion</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">longestPalindrome</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> len = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">boolean</span>[] map = <span class="keyword">new</span> <span class="keyword">boolean</span>[<span class="number">128</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">char</span> c : s.toCharArray())&#123;</span><br><span class="line">            map[c] = !map[c];<span class="comment">//将有字符的位置由false变成true</span></span><br><span class="line">            <span class="comment">//如果该位置为false的话证明有偶数个数存在</span></span><br><span class="line">            <span class="keyword">if</span>(!map[c]) len += <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//如果字符串长度大于已累计长度，添加一个元素放在回文字符串中间</span></span><br><span class="line">        <span class="keyword">if</span> (len &lt; s.length())len++;</span><br><span class="line">        <span class="keyword">return</span> len;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     
   </div>
@@ -305,7 +304,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-count">16</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
