@@ -9,7 +9,7 @@ declare @i int
 set @i=1
 while @i<100000
 begin
-    insert into test(title,date_time) values('test'+cast(@i as ncahr(10)),getdate())
+    insert into test(title,date_time) values('test'+cast(@i as nvarchar(10)),getdate())
     set @i=@i+1
 end
 go

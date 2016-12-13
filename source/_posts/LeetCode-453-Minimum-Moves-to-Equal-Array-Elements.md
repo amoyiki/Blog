@@ -15,16 +15,15 @@ tags:
 操作次数 = 数组总和 - 数组中最小的数*数组长度
 
 ### 具体代码 ###
->python
-
+**python**
 ```python
 class Solution(object):
     def minMoves(self, nums):
         return sum(nums) - min(nums)*len(nums)
 
 ```
->java
 
+**java**
 ```java
 public class Solution {
     public int minMoves(int[] nums) {

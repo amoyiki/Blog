@@ -3,6 +3,20 @@
   
     
     <entry>
+      <title><![CDATA[[LeetCode]303. Range Sum Query - Immutable]]></title>
+      <url>%2F2016%2F12%2F07%2FLeetCode-303-Range-Sum-Query-Immutable%2F</url>
+      <content type="text"><![CDATA[问题描述给定一个数字数组，求下标在i和j(i ≤ j)之间的元素和 解题思路利用一个辅助数组sums[x+1]来存储当前位置与之前元素的累加和 具体代码python1234567891011class NumArray(object): def __init__(self,nums): size = len(nums) # 辅助函数sums，计算每个位置与之前的数字累积和 self.sums = [0] * (size + 1) for x in range(size): # 当前(x+1)位置元素累积和 = 前一位(累积和)+当前元素 self.sums[x + 1] += self.sums[x] + nums[x] def sumRange(self,i,j): return self.sums[j+1] - self.sums[i] Java1234567891011121314public class NumArray &#123; public int[] sums; public NumArray(int[] nums) &#123; int size = nums.length; sums = new int[size+1]; for(int i=0;i&lt;size;i++)&#123; sums[i+1] = sums[i] + nums[i]; &#125; &#125; public int sumRange(int i, int j) &#123; return sums[j+1] - sums[i]; &#125;&#125;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[HashMap,Hashtable,ConcurrentHashMap,SynchronizedMap的原理与区别]]></title>
+      <url>%2F2016%2F12%2F07%2F%E4%BA%86%E8%A7%A3HashMap%2F</url>
+      <content type="text"><![CDATA[HashMapHashMap的碰撞处理HashMap通过hashCode()方法来确定元素存储的bucketIndex位置，不同的Key有概率hash是相同的。两个不同Key的hash值相同时，HashMap通过单链表方式，将新元素加入链表表头，通过next指向原有元素。 在JDK1.8版本中，只要bucket中的链表长度超过阈值（8）时，会将链表转化为红黑树在JDK1.7中HashMap的put方法源码如下：1234567891011121314151617181920212223242526public V put(K key, V value) &#123; ... //处理Key为null if (key == null) return putForNullKey(value); //得到key的hash码 int hash = hash(key); //由hash码获取bucketIndex下标 int i = indexFor(hash, table.length); //取出bucketIndex上元素，形成单链表 for (Entry&lt;K,V&gt; e = table[i]; e != null; e = e.next) &#123; Object k; //hash码相同时且对象相同时 if (e.hash == hash &amp;&amp; ((k = e.key) == key || key.equals(k))) &#123; //替换旧值 V oldValue = e.value; e.value = value; e.recordAccess(this); return oldValue; &#125; &#125; //key不存在，加入新元素 modCount++; addEntry(hash, key, value, i); return null; &#125; 为什么HashMap线程不安全 并发时，多线程同时操作使用put方法添加元素，如果发生碰撞，可能会导致两个值添加到同一位置，致使最终有一个值被覆盖 多线程使用HashMap进行扩容时，可能会形成循环链路，详情可以看看Java HashMap的死循环]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[Java垃圾回收]]></title>
       <url>%2F2016%2F12%2F06%2FJava%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%2F</url>
       <content type="text"><![CDATA[GC 如何判断对象可以被回收引用计数算法早期Java使用的算法，现已不用。 可达性分析算法以GC Root 作为起始点，向下搜索。走过的路径成为引用链。当一个对象到GC Root没有任何引用链相连时，证明对象不可用。Java的GC Root对象包括： 虚拟机栈（栈帧中的本地变量表中引用对象） 方法区中类静态属性引用对象 方法区常量引用对象 本地方法JNI引用对象]]></content>
@@ -12,28 +26,28 @@
     <entry>
       <title><![CDATA[[LeetCode]463. Island Perimeter]]></title>
       <url>%2F2016%2F11%2F23%2FLeetCode-463-Island-Perimeter%2F</url>
-      <content type="text"><![CDATA[问题描述给定一个二维地图，1表示陆地，0表示水域。每一个陆地是边长为1的正方形。求岛屿的周长。 解题思路每个格子周长为4，两个格子相邻时周长-2 具体代码 python 1234567891011121314class Solution(object): def islandPerimeter(self, grid): ans = 0 h = len(grid) w = len(grid[0]) if h else 0 for x in range(h): for y in range(w): if grid[x][y] == 1: ans += 4 if x &gt; 0 and grid[x-1][y]: ans -= 2 if y &gt; 0 and grid[x][y-1]: ans -= 2 return ans Java 1234567891011121314151617public class Solution &#123; public int islandPerimeter(int[][] grid) &#123; int ans = 0; int h = g.length; int w = g[0].length; for(int i=0;i&lt;h;i++)&#123; for (int j=0;j&lt;w;j++)&#123; if (g[i][j] == 1)&#123; ans += 4; if(i &gt; 0 &amp;&amp; g[i-1][j] == 1) ans -= 2; if(j &gt; 0 &amp;&amp; g[i][j-1] == 1) ans -= 2; &#125; &#125; &#125; return ans &#125;&#125;]]></content>
+      <content type="text"><![CDATA[问题描述给定一个二维地图，1表示陆地，0表示水域。每一个陆地是边长为1的正方形。求岛屿的周长。 解题思路每个格子周长为4，两个格子相邻时周长-2 具体代码python1234567891011121314class Solution(object): def islandPerimeter(self, grid): ans = 0 h = len(grid) w = len(grid[0]) if h else 0 for x in range(h): for y in range(w): if grid[x][y] == 1: ans += 4 if x &gt; 0 and grid[x-1][y]: ans -= 2 if y &gt; 0 and grid[x][y-1]: ans -= 2 return ans Java1234567891011121314151617public class Solution &#123; public int islandPerimeter(int[][] grid) &#123; int ans = 0; int h = g.length; int w = g[0].length; for(int i=0;i&lt;h;i++)&#123; for (int j=0;j&lt;w;j++)&#123; if (g[i][j] == 1)&#123; ans += 4; if(i &gt; 0 &amp;&amp; g[i-1][j] == 1) ans -= 2; if(j &gt; 0 &amp;&amp; g[i][j-1] == 1) ans -= 2; &#125; &#125; &#125; return ans &#125;&#125;]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[[LeetCode]217. Contains Duplicate]]></title>
       <url>%2F2016%2F11%2F10%2FLeetCode-217-Contains-Duplicate%2F</url>
-      <content type="text"><![CDATA[问题描述给定一个整数数组，判断是否包含重复元素，是返回true。若都是唯一返回false 解题思路具体代码 python]]></content>
+      <content type="text"><![CDATA[问题描述给定一个整数数组，判断是否包含重复元素，是返回true。若都是唯一返回false 解题思路具体代码python12 Java12]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[[LeetCode]453.Minimum Moves to Equal Array Elements]]></title>
       <url>%2F2016%2F11%2F09%2FLeetCode-453-Minimum-Moves-to-Equal-Array-Elements%2F</url>
-      <content type="text"><![CDATA[问题描述给定一个长度为n的非空数字数组，每次对n-1个加1。求所有元素值相等，需要几次操作。 解题思路//todo: 插入gif图操作次数 = 数组总和 - 数组中最小的数*数组长度 具体代码 python 123class Solution(object): def minMoves(self, nums): return sum(nums) - min(nums)*len(nums) java 1234567891011public class Solution &#123; public int minMoves(int[] nums) &#123; int min = nums[0]; int sum = 0; for(int i: nums)&#123; min = Math.min(min,i); sum +=i; &#125; return sum - min*nums.length; &#125;&#125;]]></content>
+      <content type="text"><![CDATA[问题描述给定一个长度为n的非空数字数组，每次对n-1个加1。求所有元素值相等，需要几次操作。 解题思路//todo: 插入gif图操作次数 = 数组总和 - 数组中最小的数*数组长度 具体代码python123class Solution(object): def minMoves(self, nums): return sum(nums) - min(nums)*len(nums) java1234567891011public class Solution &#123; public int minMoves(int[] nums) &#123; int min = nums[0]; int sum = 0; for(int i: nums)&#123; min = Math.min(min,i); sum +=i; &#125; return sum - min*nums.length; &#125;&#125;]]></content>
     </entry>
 
     
     <entry>
       <title><![CDATA[[LeetCode]409.Longest Palindrome]]></title>
       <url>%2F2016%2F11%2F09%2FLeetCode-409-Longest-Palindrome%2F</url>
-      <content type="text"><![CDATA[问题描述求一串字符串最大的回文子字符串长度注意：1.大小写敏感.2.默认字符串全大写或全小写 解题思路偶数字符个数累加；奇数字符个数先减一再累加，同时计算奇数个数。最后如果奇数个数大于0，累加结果再加1。 具体代码 python 12345678910class Solution(object): def longestPalindrome(self, s): ans = odd = 0 count = collections.Counter(s) for i in count: ans += count[i] if count[i] % 2 == 1: ans -= 1 odd += 1 return ans + (odd &gt; 0) Java 1234567891011121314class Soultion &#123; public int longestPalindrome(String s) &#123; int len = 0; boolean[] map = new boolean[128]; for(char c : s.toCharArray())&#123; map[c] = !map[c];//将有字符的位置由false变成true //如果该位置为false的话证明有偶数个数存在 if(!map[c]) len += 2; &#125; //如果字符串长度大于已累计长度，添加一个元素放在回文字符串中间 if (len &lt; s.length())len++; return len; &#125;&#125;]]></content>
+      <content type="text"><![CDATA[问题描述求一串字符串最大的回文子字符串长度注意：1.大小写敏感.2.默认字符串全大写或全小写 解题思路偶数字符个数累加；奇数字符个数先减一再累加，同时计算奇数个数。最后如果奇数个数大于0，累加结果再加1。 具体代码python12345678910class Solution(object): def longestPalindrome(self, s): ans = odd = 0 count = collections.Counter(s) for i in count: ans += count[i] if count[i] % 2 == 1: ans -= 1 odd += 1 return ans + (odd &gt; 0) Java1234567891011121314class Soultion &#123; public int longestPalindrome(String s) &#123; int len = 0; boolean[] map = new boolean[128]; for(char c : s.toCharArray())&#123; map[c] = !map[c];//将有字符的位置由false变成true //如果该位置为false的话证明有偶数个数存在 if(!map[c]) len += 2; &#125; //如果字符串长度大于已累计长度，添加一个元素放在回文字符串中间 if (len &lt; s.length())len++; return len; &#125;&#125;]]></content>
     </entry>
 
     

@@ -14,8 +14,7 @@ tags:
 ### 解题思路 ###
 每个格子周长为4，两个格子相邻时周长-2
 ### 具体代码 ###
->python
-
+**python**
 ```python
 class Solution(object):
     def islandPerimeter(self, grid):
@@ -33,8 +32,7 @@ class Solution(object):
         return ans
 ```
 
->Java
-
+**Java**
 ```java
 public class Solution {
     public int islandPerimeter(int[][] grid) {

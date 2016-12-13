@@ -17,8 +17,7 @@ tags:
 偶数字符个数累加；奇数字符个数先减一再累加，同时计算奇数个数。
 最后如果奇数个数大于0，累加结果再加1。
 ### 具体代码 ###
->python
-
+**python**
 ```python
 class Solution(object):
     def longestPalindrome(self, s):
@@ -32,8 +31,7 @@ class Solution(object):
         return ans + (odd > 0)
 ```
 
->Java
-
+**Java**
 ```java
 class Soultion {
     public int longestPalindrome(String s) {
