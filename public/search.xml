@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[[LeetCode]290. Word Pattern]]></title>
+      <url>%2F2016%2F12%2F12%2FLeetCode-290-Word-Pattern%2F</url>
+      <content type="text"><![CDATA[问题描述给定一个模式pattern和一个字符串str，判断str是否满足相同的pattern。例如：pattern = “abba”, str = “dog cat cat dog” 则返回 true. 解题思路具体代码python12345class Solution(object): def wordPattern(self, pattern, str): p = pattern s = str.split() return map(p.find,p) == map(s.index,s) Java12345678910111213141516171819public class Solution &#123; public boolean wordPattern(String pattern, String str) &#123; String[] words = str.split(" "); if(pattern.length() != words.length) return false; Set&lt;String&gt; set = new HashSet&lt;String&gt;(); Map&lt;Character,String&gt; map = new HashMap&lt;Character,String&gt;(); for(int i=0;i&lt;words.length;i++)&#123; char p = pattern.charAt(i); if (map.containsKey(p))&#123; if(!map.get(p).equals(words[i])) return false; &#125;else &#123; if (set.contains(words[i])) return false; map.put(p,words[i]); set.add(words[i]); &#125; &#125; return true; &#125;&#125;]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[[LeetCode]303. Range Sum Query - Immutable]]></title>
       <url>%2F2016%2F12%2F07%2FLeetCode-303-Range-Sum-Query-Immutable%2F</url>
       <content type="text"><![CDATA[问题描述给定一个数字数组，求下标在i和j(i ≤ j)之间的元素和 解题思路利用一个辅助数组sums[x+1]来存储当前位置与之前元素的累加和 具体代码python1234567891011class NumArray(object): def __init__(self,nums): size = len(nums) # 辅助函数sums，计算每个位置与之前的数字累积和 self.sums = [0] * (size + 1) for x in range(size): # 当前(x+1)位置元素累积和 = 前一位(累积和)+当前元素 self.sums[x + 1] += self.sums[x] + nums[x] def sumRange(self,i,j): return self.sums[j+1] - self.sums[i] Java1234567891011121314public class NumArray &#123; public int[] sums; public NumArray(int[] nums) &#123; int size = nums.length; sums = new int[size+1]; for(int i=0;i&lt;size;i++)&#123; sums[i+1] = sums[i] + nums[i]; &#125; &#125; public int sumRange(int i, int j) &#123; return sums[j+1] - sums[i]; &#125;&#125;]]></content>
@@ -33,7 +40,7 @@
     <entry>
       <title><![CDATA[[LeetCode]217. Contains Duplicate]]></title>
       <url>%2F2016%2F11%2F10%2FLeetCode-217-Contains-Duplicate%2F</url>
-      <content type="text"><![CDATA[问题描述给定一个整数数组，判断是否包含重复元素，是返回true。若都是唯一返回false 解题思路具体代码python12 Java12]]></content>
+      <content type="text"><![CDATA[问题描述给定一个整数数组，判断是否包含重复元素，是返回true。若都是唯一返回false 解题思路利用set这种数据结构的特点，只要set后的数据长度不等于原来的数据长度的话，就证明有重复元素，否则证明没有重复元素。 具体代码python123class Solution(object): def containsDuplicate(self, nums): return len(nums) != len(set(nums)) Java12345678910public class Solution &#123; public boolean containsDuplicate(int[] nums) &#123; Set s = new HashSet(); for(int n:nums)&#123; s.add(n); &#125; if(nums.length != s.size()) return true; return false; &#125;&#125;]]></content>
     </entry>
 
     
@@ -89,7 +96,7 @@
     <entry>
       <title><![CDATA[SQL 生成10万条测试数据]]></title>
       <url>%2F2016%2F08%2F18%2FSQL-%E7%94%9F%E6%88%9010%E4%B8%87%E6%9D%A1%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE%2F</url>
-      <content type="text"><![CDATA[循环插入10万条测试数据12345678declare @i intset @i=1while @i&lt;100000begin insert into test(title,date_time) values('test'+cast(@i as ncahr(10)),getdate()) set @i=@i+1endgo 注意: cast()函数是强制类型转换与convert()用法一致 declare 用于声明变量]]></content>
+      <content type="text"><![CDATA[循环插入10万条测试数据12345678declare @i intset @i=1while @i&lt;100000begin insert into test(title,date_time) values('test'+cast(@i as nvarchar(10)),getdate()) set @i=@i+1endgo 注意: cast()函数是强制类型转换与convert()用法一致 declare 用于声明变量]]></content>
     </entry>
 
     

@@ -25,6 +25,23 @@ class Solution(object):
 ```
 **Java**
 ```java
-
-
+public class Solution {
+    public boolean wordPattern(String pattern, String str) {
+        String[] words = str.split(" ");
+        if(pattern.length() != words.length) return false;
+        Set<String> set = new HashSet<String>();
+        Map<Character,String> map = new HashMap<Character,String>();
+        for(int i=0;i<words.length;i++){
+            char p = pattern.charAt(i);
+            if (map.containsKey(p)){
+                if(!map.get(p).equals(words[i])) return false;
+            }else {
+                if (set.contains(words[i])) return false;
+                map.put(p,words[i]);
+                set.add(words[i]);
+            }
+        }
+        return true;
+    }
+}
 ```

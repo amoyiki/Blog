@@ -108,25 +108,25 @@
 
 
 
-<meta name="description" content="循环插入10万条测试数据12345678declare @i intset @i=1while @i&amp;lt;100000begin    insert into test(title,date_time) values(&apos;test&apos;+cast(@i as ncahr(10)),getdate())    set @i=@i+1endgo
+<meta name="description" content="循环插入10万条测试数据12345678declare @i intset @i=1while @i&amp;lt;100000begin    insert into test(title,date_time) values(&apos;test&apos;+cast(@i as nvarchar(10)),getdate())    set @i=@i+1endgo
 注意:  
 
-cast()函数是强制类型转换与convert">
+cast()函数是强制类型转换与conv">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQL 生成10万条测试数据">
 <meta property="og:url" content="http://yoursite.com/2016/08/18/SQL-生成10万条测试数据/index.html">
 <meta property="og:site_name" content="四畳半神话大系">
-<meta property="og:description" content="循环插入10万条测试数据12345678declare @i intset @i=1while @i&amp;lt;100000begin    insert into test(title,date_time) values(&apos;test&apos;+cast(@i as ncahr(10)),getdate())    set @i=@i+1endgo
+<meta property="og:description" content="循环插入10万条测试数据12345678declare @i intset @i=1while @i&amp;lt;100000begin    insert into test(title,date_time) values(&apos;test&apos;+cast(@i as nvarchar(10)),getdate())    set @i=@i+1endgo
 注意:  
 
-cast()函数是强制类型转换与convert">
-<meta property="og:updated_time" content="2016-08-18T03:04:49.108Z">
+cast()函数是强制类型转换与conv">
+<meta property="og:updated_time" content="2016-12-13T03:52:51.801Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL 生成10万条测试数据">
-<meta name="twitter:description" content="循环插入10万条测试数据12345678declare @i intset @i=1while @i&amp;lt;100000begin    insert into test(title,date_time) values(&apos;test&apos;+cast(@i as ncahr(10)),getdate())    set @i=@i+1endgo
+<meta name="twitter:description" content="循环插入10万条测试数据12345678declare @i intset @i=1while @i&amp;lt;100000begin    insert into test(title,date_time) values(&apos;test&apos;+cast(@i as nvarchar(10)),getdate())    set @i=@i+1endgo
 注意:  
 
-cast()函数是强制类型转换与convert">
+cast()函数是强制类型转换与conv">
 
 
 
@@ -437,7 +437,7 @@ cast()函数是强制类型转换与convert">
       
 
       
-        <h3 id="循环插入10万条测试数据"><a href="#循环插入10万条测试数据" class="headerlink" title="循环插入10万条测试数据"></a>循环插入10万条测试数据</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">declare</span> @i <span class="built_in">int</span></span><br><span class="line"><span class="keyword">set</span> @i=<span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> @i&lt;<span class="number">100000</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span>(title,date_time) <span class="keyword">values</span>(<span class="string">'test'</span>+<span class="keyword">cast</span>(@i <span class="keyword">as</span> ncahr(<span class="number">10</span>)),<span class="keyword">getdate</span>())</span><br><span class="line">    <span class="keyword">set</span> @i=@i+<span class="number">1</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">go</span></span><br></pre></td></tr></table></figure>
+        <h3 id="循环插入10万条测试数据"><a href="#循环插入10万条测试数据" class="headerlink" title="循环插入10万条测试数据"></a>循环插入10万条测试数据</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">declare</span> @i <span class="built_in">int</span></span><br><span class="line"><span class="keyword">set</span> @i=<span class="number">1</span></span><br><span class="line"><span class="keyword">while</span> @i&lt;<span class="number">100000</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">insert</span> <span class="keyword">into</span> <span class="keyword">test</span>(title,date_time) <span class="keyword">values</span>(<span class="string">'test'</span>+<span class="keyword">cast</span>(@i <span class="keyword">as</span> <span class="keyword">nvarchar</span>(<span class="number">10</span>)),<span class="keyword">getdate</span>())</span><br><span class="line">    <span class="keyword">set</span> @i=@i+<span class="number">1</span></span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">go</span></span><br></pre></td></tr></table></figure>
 <p><strong>注意</strong>:  </p>
 <ol>
 <li><code>cast()</code>函数是强制类型转换与<code>convert()</code>用法一致</li>
@@ -554,7 +554,7 @@ cast()函数是强制类型转换与convert">
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">19</span>
+              <span class="site-state-item-count">20</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
