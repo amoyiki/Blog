@@ -242,7 +242,7 @@ custom_logo:
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: night bright
+highlight_theme: night eighties
 
 
 # ---------------------------------------------------------------
@@ -260,7 +260,7 @@ mathjax:
 #swiftype_key:
 
 # Baidu Analytics ID
-#baidu_analytics:
+baidu_analytics: c3916ebb87080111f91966b1291316d7
 
 # Duoshuo ShortName
 duoshuo_shortname: amoyiki

@@ -12,7 +12,7 @@ pattern = "abba", str = "dog cat cat dog" 则返回 true.
 <!-- more -->
 
 ### 解题思路 ###
-
+判断pattern，str每个元素出现的下标，求得的数组相等即返回true
 ### 具体代码 ###
 **python**
 ```python
