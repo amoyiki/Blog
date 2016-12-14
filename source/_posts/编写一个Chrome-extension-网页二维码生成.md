@@ -89,8 +89,8 @@ onload=function(){
 }
 ```
 到目前为止，一个简单的QRCode生成器边完成了。
-![加载自定义插件](http://github.com/amoyiki/Blog/raw/master/Document/images/chrome_extension_qrcode01.png)
-![QRCode](http://github.com/amoyiki/Blog/raw/master/Document/images/chrome_extension_qrcode02.png)
+![加载自定义插件](http://oi6538cys.bkt.clouddn.com/chrome_extension_qrcode01.png)
+![QRCode](http://oi6538cys.bkt.clouddn.com/chrome_extension_qrcode02.png)
 
 ## 后续 ##
 
