@@ -3,6 +3,13 @@
   
     
     <entry>
+      <title><![CDATA[Python协程]]></title>
+      <url>%2F2016%2F12%2F16%2FPython%E5%8D%8F%E7%A8%8B%2F</url>
+      <content type="text"><![CDATA[– 施工中 – Because generator-iterators begin execution at the top of the generator’s function body, there is no yield expression to receive a value when the generator has just been created. Therefore, calling send() with a non-None argument is prohibited when the generator iterator has just started, and a TypeError is raised if this occurs (presumably due to a logic error of some kind). Thus, before you can communicate with a coroutine you must first call next() or send(None) to advance its execution to the first yield expression. 因为生成器在执行函数时，生成器刚被创建，没有接收到yield表达式的值隐藏当生成器启动时禁止进行无参send()方法]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[git技巧--gitignore配置]]></title>
       <url>%2F2016%2F12%2F15%2Fgit%E6%8A%80%E5%B7%A7-gitignore%E9%85%8D%E7%BD%AE%2F</url>
       <content type="text"><![CDATA[.gitignore 文件配置 .gitignore 配置无法解决问题时如果.gitignore配置完后，仍无法屏蔽掉特殊文件的情况。我们可以手动修改项目路径下的.git/info/exclude文件。例如： 在Pycharm下进行Python开发时会生成临时文件__pycache__/,只需将这个文件名写到exclude文件内即可。]]></content>
