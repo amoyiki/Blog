@@ -1680,7 +1680,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fb858c;
+  background: #fff0ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2113,6 +2113,9 @@ a.search-result {
 #local-search-result {
   height: 88%;
   overflow: auto;
+  background-image: url("http://oi6538cys.bkt.clouddn.com/2233.png");
+  background-repeat: no-repeat;
+  background-position: 90% bottom;
 }
 .popup {
   display: none;
