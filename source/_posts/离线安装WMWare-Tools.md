@@ -1,5 +1,5 @@
 ---
-title: 离线安装WMWare Tools
+title: 离线安装VMWare Tools
 date: 2016-12-19 16:26:33
 categories: "工具配置"
 tags:
