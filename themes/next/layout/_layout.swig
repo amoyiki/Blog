@@ -30,6 +30,19 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+        {% if hasSearch %}
+        <div class="menu-item menu-item-search">
+          {% if theme.swiftype_key %}
+            <a href="javascript:;" class="st-search-show-outputs" style="margin-left: 70%;display: block;">
+          {% elseif config.search %}
+            <a href="javascript:;" class="popup-trigger"  style="margin-left: 70%;display: block;">
+          {% endif %}
+            {% if theme.menu_icons.enable %}
+              <i class="menu-item-icon fa fa-search fa-fw"></i>{{ __('menu.search') }} <br />
+            {% endif %}
+          </a>
+        </div>
+        {% endif %}
           <div id="content" class="content">
             {% block content %}{% endblock %}
           </div>
