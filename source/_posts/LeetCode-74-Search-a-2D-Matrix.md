@@ -20,8 +20,22 @@ tags:
 ### 具体代码 ###
 **python**
 ```python
-
-
+class Solution(object):
+    def searchMatrix(self, matrix, target):
+        if matrix is None or len(matrix)==0:
+            return False
+        row = len(matrix)
+        col = len(matrix[0])
+        i=col-1
+        j=0
+        while(i>=0 and j<row):
+            if matrix[j][i] == target:
+                return True
+            elif matrix[j][i] > target:
+                i = i - 1
+            elif matrix[j][i] < target:
+                j = j + 1
+        return False
 ```
 **java**
 ```java
