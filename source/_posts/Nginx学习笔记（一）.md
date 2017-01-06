@@ -1,5 +1,5 @@
 ---
-title: Nginx学习笔记（一）
+title: Nginx学习笔记（一）安装Nginx
 date: 2016-10-16 22:42:14
 categories: "Nginx"
 tags:
@@ -42,3 +42,4 @@ $> sudo chmod +x /etc/init.d/nginx
 现在我们就可以用简短的命令启动服务了
 
 > Usage: /etc/init.d/nginx {start|stop|restart|force-reload|reload|status|configtest|quietupgrade|terminate|destroy}
+
