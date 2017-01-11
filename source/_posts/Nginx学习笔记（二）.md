@@ -32,8 +32,8 @@ http { #http块
 ```
 <!-- more -->
 - `全局块`：配置会影响nginx全局指令
-- `events块`：
-- `http块`：
+- `events块`：配置事件驱动模型和最大连接数
+- `http块`：可以嵌套多个server，配置代理，缓存，日志
 - `server块`：
 - `location块`：
 ** --施工中-- **

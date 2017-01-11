@@ -1323,14 +1323,14 @@ pre .javascript .function {
   display: none;
 }
 .posts-expand .post-title {
-  font-size: 26px;
+  font-size: 22px;
   text-align: center;
   word-break: break-word;
   font-weight: 400;
 }
 @media (max-width: 767px) {
   .posts-expand .post-title {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .posts-expand .post-title-link {
@@ -1676,7 +1676,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #386971;
+  background: #25f667;
 }
 .links-of-blogroll {
   font-size: 13px;

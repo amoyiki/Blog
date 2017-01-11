@@ -3,9 +3,30 @@
   
     
     <entry>
+      <title><![CDATA[[LeetCode]232. Implement Queue using Stacks]]></title>
+      <url>%2F2017%2F01%2F11%2FLeetCode-232-Implement-Queue-using-Stacks%2F</url>
+      <content type="text"><![CDATA[问题描述利用堆栈实现队列功能 解题思路Stack的特点是先进后出，Queue的特点是先进先出。利用两个Stack，一个负责输入一个负责输出.如果输出堆栈为空，将输入堆栈值传给输出堆栈，若两个堆栈都为空，返回空值python中用list模拟堆栈. 具体代码python1234567891011121314151617181920class Queue(object): def __init__(self): self.stackA = [] self.stackB = [] def push(self, x): self.stackA.append(x) def pop(self): self.peek() self.stackB.pop() def peek(self): if self.stackB: return self.stackB[-1] elif not self.stackA: return None else: while self.stackA: self.stackB.append(self.stackA.pop()) return self.stackB[-1] def empty(self): return len(self.stackA)==0 and len(self.stackB)==0 Java12]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Nginx学习笔记（二）配置及性能调优]]></title>
+      <url>%2F2017%2F01%2F06%2FNginx%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89%2F</url>
+      <content type="text"><![CDATA[如何使用配置文档1.nginx文档结构12345678910111213141516171819202122... #全局块events &#123; #events块 ... &#125;http &#123; #http块 ... #http全局块 server &#123; #server块 ... #server全局块 location [PATTRERN] &#123; #location块 ... &#125; location [PATTRERN] &#123; ... &#125; &#125; ...&#125; 全局块：配置会影响nginx全局指令 events块：配置事件驱动模型和最大连接数 http块：可以嵌套多个server，配置代理，缓存，日志 server块： location块： –施工中– 性能调优 –施工中–]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[[LeetCode]105.Construct Binary Tree from Preorder and Inorder Traversal]]></title>
+      <url>%2F2017%2F01%2F05%2FLeetCode-105-Construct-Binary-Tree-from-Preorder-and-Inorder-Traversal%2F</url>
+      <content type="text"><![CDATA[问题描述给定树的前序遍历和中序遍历，构建出这个二叉树 解题思路具体代码python12345678910111213class Solution(object): def buildTree(self, preorder, inorder): if not preorder or not inorder: return None rootValue = preorder.pop(0) root = TreeNode(rootValue) inorderIndex = inorder.index(rootValue) root.left = self.buildTree(preorder, inorder[:inorderIndex]) root.right = self.buildTree(preorder, inorder[inorderIndex+1:]) return root Java12]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[[LeetCode]74. Search a 2D Matrix]]></title>
       <url>%2F2016%2F12%2F21%2FLeetCode-74-Search-a-2D-Matrix%2F</url>
-      <content type="text"><![CDATA[问题描述在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。 解题思路一开始打算用二分查找的方式，将二维数组划分成两部分，递归判断。实际写出来的时候就发现，二维数组并不好去判断值。后来在网上看到一个更好的方法。 1 3 5 7 10 11 16 20 23 30 34 50 具体代码python12345678910111213141516class Solution(object): def searchMatrix(self, matrix, target): if matrix is None or len(matrix)==0: return False row = len(matrix) col = len(matrix[0]) i=col-1 j=0 while(i&gt;=0 and j&lt;row): if matrix[j][i] == target: return True elif matrix[j][i] &gt; target: i = i - 1 elif matrix[j][i] &lt; target: j = j + 1 return False java123456789101112131415161718public class Solution &#123; public boolean searchMatrix(int[][] matrix, int target) &#123; if(matrix==null || matrix.length==0 || matrix[0].length==0) return false; int i = 0; int j = matrix[0].length - 1; while (i &lt;= matrix.length - 1 &amp;&amp; j &gt;= 0) &#123; if (target == matrix[i][j]) &#123; return true; &#125; else if (target &lt; matrix[i][j]) &#123; j--; &#125; else if (target &gt; matrix[i][j]) &#123; i++; &#125; &#125; return false; &#125;&#125;]]></content>
+      <content type="text"><![CDATA[问题描述在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。 解题思路一开始打算用二分查找的方式，将二维数组划分成两部分，递归判断。实际写出来的时候就发现，二维数组并不好去判断值。后来在网上看到一个更好的方法。 将二维数组转化成二维平面，将target值从第一行的最后一个值开始查找，小于就往左边移动，大于就往下面移动。 1 3 5 7 10 11 16 20 23 30 34 50 具体代码python12345678910111213141516class Solution(object): def searchMatrix(self, matrix, target): if matrix is None or len(matrix)==0: return False row = len(matrix) col = len(matrix[0]) i=col-1 j=0 while(i&gt;=0 and j&lt;row): if matrix[j][i] == target: return True elif matrix[j][i] &gt; target: i = i - 1 elif matrix[j][i] &lt; target: j = j + 1 return False java123456789101112131415161718public class Solution &#123; public boolean searchMatrix(int[][] matrix, int target) &#123; if(matrix==null || matrix.length==0 || matrix[0].length==0) return false; int i = 0; int j = matrix[0].length - 1; while (i &lt;= matrix.length - 1 &amp;&amp; j &gt;= 0) &#123; if (target == matrix[i][j]) &#123; return true; &#125; else if (target &lt; matrix[i][j]) &#123; j--; &#125; else if (target &gt; matrix[i][j]) &#123; i++; &#125; &#125; return false; &#125;&#125;]]></content>
     </entry>
 
     
@@ -108,7 +129,7 @@
 
     
     <entry>
-      <title><![CDATA[Nginx学习笔记（一）]]></title>
+      <title><![CDATA[Nginx学习笔记（一）安装Nginx]]></title>
       <url>%2F2016%2F10%2F16%2FNginx%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%2F</url>
       <content type="text"><![CDATA[在Linux下安装Nginx 在(Nginx官网)[http://nginx.org/en/download.html]上下载压缩包。 解压后进行安装 在./configure的时候会报错./configure: error: the HTTP rewrite module requires the PCRE library. 这时候我们需要在Linux上安装PCRE库 sudo apt-get update sudo apt-get install libpcre3 libpcre3-dev 再次编译，发现又报了缺少zlib library，我们再次照葫芦画瓢安装zlib sudo apt-get install zlib1g-dev 再次编译，发现Nginx安装成功！ Nginx的启动，关闭命令 Nginx 启动命令 1/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf Nginx 关闭命令 1kill -QUIT PID 将Nginx写成服务运行如果每次都去执行/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf是非常麻烦的事。所以我们将Nginx的相关操作写成Bash脚本，就能像windows服务一样简单的几个命令就能完成任务。首先我们在网上Copy一份&gt;&gt;Ngnix脚本然后在Linux执行命令 12$&gt; sudo wget http://github.com/amoyiki/Blog/raw/master/Document/nginx -O /etc/init.d/nginx$&gt; sudo chmod +x /etc/init.d/nginx 现在我们就可以用简短的命令启动服务了 Usage: /etc/init.d/nginx {start|stop|restart|force-reload|reload|status|configtest|quietupgrade|terminate|destroy}]]></content>
     </entry>
