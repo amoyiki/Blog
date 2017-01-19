@@ -9,7 +9,7 @@ categories: "SQL"
   ```sql
   truncate table tb
   ```
-但是`truncate`方法不能清空含有`Foreign Key`约束的表，这个时候就需要用到方法二了。
+  但是`truncate`方法不能清空含有`Foreign Key`约束的表，这个时候就需要用到方法二了。
 2. 方法二
   ```sql
 DBCC CHECKIDENT(TB,RESEED,0)
