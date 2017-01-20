@@ -3,9 +3,23 @@
   
     
     <entry>
+      <title><![CDATA[[LeetCode]153.Find Minimum in Rotated Sorted Array]]></title>
+      <url>%2F2017%2F01%2F19%2FLeetCode-153-Find-Minimum-in-Rotated-Sorted-Array%2F</url>
+      <content type="text"><![CDATA[问题描述一个顺序数组，经过一次旋转{1,2,3,4,5} —&gt; {3,4,5,1,2}找出最小元素。 解题思路无论Java还是Python，只要排序过后就可以找出最小元素。时间复杂度O(n)如Python方法min()就能直接得出数组最小值。Java也有Arrays.sort()方法排序。但是如果单纯O(n)的复杂度，明显没有多大的意义。所有这道题应该用二分查找方法来返回最小值。 具体代码python12345678910class Solution(object): def findMin(self,nums): left,right = 0, len(nums) - 1 while left &lt; right: mid = (left + right) / 2 if nums[mid] &lt;= nums[right]: right = mid else: low = mid + 1 return nums[low]]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[[转]Java集合小抄]]></title>
+      <url>%2F2017%2F01%2F18%2F%E8%BD%AC-Java%E9%9B%86%E5%90%88%E5%B0%8F%E6%8A%84%2F</url>
+      <content type="text"><![CDATA[ListArrayList 以数组实现，节约空间。但是数组容量限制，超出限制会增加50%容量，用System.arraycopy()复制到新的数组。因此最好能给出数组大小的预估值。 默认第一次大小为10。 按下标访问元素，get(下标获取元素)、set(替换下标元素)的性能很高，是数组的基本优势。 按下标插入元素，删除元素，add(i,e)、remove(i)、remove(e),则会用到System.arraycopy()来复制移动受影响的元素,性能会变差。 越是前面的元素，修改的时候移动的元素越多。用add(e)在尾部添加元素、删除最后一个元素不会影响性能。LinkedList 以双向链表实现，链表无容量限制，但是双向链表本身使用了更多空间，每插入一个元素都要构造一个额外的Node对象，也需要额外的指针操作。 按数组下标访问元素，get(i)、set(i,e),需要移动到指定Node节点(i&gt;节点个数时从尾部移动到头部) 插入、删除元素时修改前后节点指针即可 只有在两头add()、addFirst()、addLast()、removeFirst()、removeLast()才能省掉指针的移动。 MapHashMap 以Enty[]数组实现的哈希桶数组，用Key的哈希值取模桶数组的大小可以的到数组的下标 插入元素时，如果两条Key落在同一个桶，称之为哈希冲突或者碰撞 哈希冲突JDK8之前是用的是链表法，用Entry用一个next属性实现多个Entry以单向链表的形式存放。然后遍历链表中的所有元素，逐一比较Key值 在JDK8后，新增链表的阈值为8，链表的元素数量超过阈值时改用红黑树来存储，提高查找速度。 当Entry数量达到数组的75%，数组成倍扩容，重新分配原来的Entry，扩容成本不低。LinkedHashMap 扩展HashMap，每个Entry增加双向链表，非常占内存的数据结构ConcurrentSkipListMap JDK6新增并发优化的SortedMap，以SkipList结构实现，支持CAS无锁算法。]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[[LeetCode]232. Implement Queue using Stacks]]></title>
       <url>%2F2017%2F01%2F11%2FLeetCode-232-Implement-Queue-using-Stacks%2F</url>
-      <content type="text"><![CDATA[问题描述利用堆栈实现队列功能 解题思路Stack的特点是先进后出，Queue的特点是先进先出。利用两个Stack，一个负责输入一个负责输出.如果输出堆栈为空，将输入堆栈值传给输出堆栈，若两个堆栈都为空，返回空值python中用list模拟堆栈. 具体代码python1234567891011121314151617181920class Queue(object): def __init__(self): self.stackA = [] self.stackB = [] def push(self, x): self.stackA.append(x) def pop(self): self.peek() self.stackB.pop() def peek(self): if self.stackB: return self.stackB[-1] elif not self.stackA: return None else: while self.stackA: self.stackB.append(self.stackA.pop()) return self.stackB[-1] def empty(self): return len(self.stackA)==0 and len(self.stackB)==0 Java12]]></content>
+      <content type="text"><![CDATA[问题描述利用堆栈实现队列功能 解题思路Stack的特点是先进后出，Queue的特点是先进先出。利用两个Stack，一个负责输入一个负责输出.如果输出堆栈为空，将输入堆栈值传给输出堆栈，若两个堆栈都为空，返回空值python中用list模拟堆栈. 具体代码python1234567891011121314151617181920class Queue(object): def __init__(self): self.stackA = [] self.stackB = [] def push(self, x): self.stackA.append(x) def pop(self): self.peek() self.stackB.pop() def peek(self): if self.stackB: return self.stackB[-1] elif not self.stackA: return None else: while self.stackA: self.stackB.append(self.stackA.pop()) return self.stackB[-1] def empty(self): return len(self.stackA)==0 and len(self.stackB)==0 Java1234567891011121314151617181920212223242526public class MyQueue&#123; Stack&lt;Integer&gt; input; Stack&lt;Integer&gt; output; public MyQueue()&#123; input = new Stack&lt;Integer&gt;(); output = new Stack&lt;Integer&gt;(); &#125; public void push(int x)&#123; input.push(x); &#125; public int pop()&#123; peek(); return output.pop(); &#125; public int peek()&#123; if(output.empty())&#123; while(!input.empty())&#123; output.push(input.pop()); &#125; &#125; return output.peek(); &#125; public boolean empty()&#123; return input.empty() &amp;&amp; output.empty(); &#125;&#125;]]></content>
     </entry>
 
     
@@ -19,7 +33,7 @@
     <entry>
       <title><![CDATA[[LeetCode]105.Construct Binary Tree from Preorder and Inorder Traversal]]></title>
       <url>%2F2017%2F01%2F05%2FLeetCode-105-Construct-Binary-Tree-from-Preorder-and-Inorder-Traversal%2F</url>
-      <content type="text"><![CDATA[问题描述给定树的前序遍历和中序遍历，构建出这个二叉树 解题思路具体代码python12345678910111213class Solution(object): def buildTree(self, preorder, inorder): if not preorder or not inorder: return None rootValue = preorder.pop(0) root = TreeNode(rootValue) inorderIndex = inorder.index(rootValue) root.left = self.buildTree(preorder, inorder[:inorderIndex]) root.right = self.buildTree(preorder, inorder[inorderIndex+1:]) return root Java12]]></content>
+      <content type="text"><![CDATA[问题描述给定树的前序遍历和中序遍历，构建出这个二叉树 解题思路相对于Python的数组切割,Java取下标值来获取每次递归所需的值区间。所以需要一个辅助函数来负责递归。前序遍历中第一个元素pre[0]一定是root节点。假设该节点的元素在中序中是在in[5],那么中序中的in[0] ~ in[4]就是左子树，in[6] ~ end 就是右子树。第二次递归，左子树从pre[1]开始(即pre[0]的下移一位)。中序数组从0~4右子树从pre[0+5-0+1]开始,中序数组从6~end第三次… 具体代码python12345678910111213class Solution(object): def buildTree(self, preorder, inorder): if not preorder or not inorder: return None rootValue = preorder.pop(0) root = TreeNode(rootValue) inorderIndex = inorder.index(rootValue) root.left = self.buildTree(preorder, inorder[:inorderIndex]) root.right = self.buildTree(preorder, inorder[inorderIndex+1:]) return root Java123456789101112131415161718192021222324public class Soultion&#123; public TreeNode buildTree(int[]preorder, int[] inorder)&#123; return helper(0,0,inorder.length-1,preorder,inorder); &#125; public TreeNode helper(int preStart, int inStart, int inEnd, int[] pre,int[] in)&#123; if(preStart &gt; pre.length - 1 || inStart &gt; inEnd)&#123; return null; &#125; TreeNode root = new TreeNode(pre[preStart]); int inIndex = 0; // root节点在中序数组中的下标位置 for(int i == inStart; i&lt;= inEnd; i++)&#123; if(in[i]==root.val)&#123; inIndex = i; &#125; &#125; /* 左子树：前序数组从当前root下标的下一位开始，中序数组从开头开始到当前root下标的前一位结束 右子树：前序数组从当前root下标的下一位，中序数组从root下标下一位到结束 */ root.left = helper(preStart + 1, inStart, inIndex - 1, pre, in); root.right = helper(preStart + inIndex - inStart + 1, inIndex + 1, inEnd , pr, in); return root; &#125;&#125;]]></content>
     </entry>
 
     
@@ -40,7 +54,7 @@
     <entry>
       <title><![CDATA[Python协程]]></title>
       <url>%2F2016%2F12%2F16%2FPython%E5%8D%8F%E7%A8%8B%2F</url>
-      <content type="text"><![CDATA[– 施工中 – Because generator-iterators begin execution at the top of the generator’s function body, there is no yield expression to receive a value when the generator has just been created. Therefore, calling send() with a non-None argument is prohibited when the generator iterator has just started, and a TypeError is raised if this occurs (presumably due to a logic error of some kind). Thus, before you can communicate with a coroutine you must first call next() or send(None) to advance its execution to the first yield expression. 因为生成器在执行函数时，生成器刚被创建，没有接收到yield表达式的值隐藏当生成器启动时禁止进行无参send()方法]]></content>
+      <content type="text"><![CDATA[– 施工中 – Because generator-iterators begin execution at the top of the generator’s function body, there is no yield expression to receive a value when the generator has just been created. Therefore, calling send() with a non-None argument is prohibited when the generator iterator has just started, and a TypeError is raised if this occurs (presumably due to a logic error of some kind). Thus, before you can communicate with a coroutine you must first call next() or send(None) to advance its execution to the first yield expression. 因为生成器在执行函数时，生成器刚被创建，没有接收到yield表达式的值隐藏当生成器启动时禁止进行无参send()方法 生产者消费者123456789101112131415161718def consumer(): # 定义一个消费者，由于有yeild关键字，此方法是个生成器 print '[Consumer] Init Consumer ...' r = 'init ok' # 初始化返回结果，在启动消费者的时候，返回给生成者 while True: n = yield r # 消费者通过yield接收生产者的消息，并返回其结果 print '[Consumer] consume n = %s, r=%s'%(n,r) r = 'consume %s OK' % n # 消费者消费结果，下个循环返回给生成者def produce(c): # 定义一个生产者，c为消费者生成器 print '[Producer] Init Producer ...' r = c.send(None) # 启动消费者生成器，同时返回第一次结果 n = 0 while n &lt; 5: n += 1 print '[Producer] While, Producing %s ...'%n r = c.send(n) # 向消费者发送消息并准备接收结果。此时会切换到消费者执行 print '[Producer] Consumer return: %s'%r c.close() print '[Producer] Close Producer ....']]></content>
     </entry>
 
     
@@ -150,9 +164,9 @@
 
     
     <entry>
-      <title><![CDATA[SQL 生成10万条测试数据]]></title>
-      <url>%2F2016%2F08%2F18%2FSQL-%E7%94%9F%E6%88%9010%E4%B8%87%E6%9D%A1%E6%B5%8B%E8%AF%95%E6%95%B0%E6%8D%AE%2F</url>
-      <content type="text"><![CDATA[循环插入10万条测试数据12345678declare @i intset @i=1while @i&lt;100000begin insert into test(title,date_time) values('test'+cast(@i as nvarchar(10)),getdate()) set @i=@i+1endgo 注意: cast()函数是强制类型转换与convert()用法一致 declare 用于声明变量]]></content>
+      <title><![CDATA[SQL小技巧]]></title>
+      <url>%2F2016%2F08%2F18%2FSQL%E5%B0%8F%E6%8A%80%E5%B7%A7%2F</url>
+      <content type="text"><![CDATA[重置表自增长ID值有时候我们需要清空一张表的数据，又不想删除增长表。除了删除数据外，还需要将自增长ID重置为0。相关的SQl操作如下 方法一 1truncate table tb 但是truncate方法不能清空含有Foreign Key约束的表，这个时候就需要用到方法二了。 方法二1DBCC CHECKIDENT(TB,RESEED,0) 循环插入10万条测试数据12345678declare @i intset @i=1while @i&lt;100000begin insert into test(title,date_time) values('test'+cast(@i as nvarchar(10)),getdate()) set @i=@i+1endgo 注意: cast()函数是强制类型转换与convert()用法一致 declare 用于声明变量]]></content>
     </entry>
 
     
