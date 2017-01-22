@@ -3,6 +3,20 @@
   
     
     <entry>
+      <title><![CDATA[[LeetCode]70. Climbing Stairs]]></title>
+      <url>%2F2017%2F01%2F20%2FLeetCode-70-Climbing-Stairs%2F</url>
+      <content type="text"><![CDATA[问题描述有n步楼梯，需要n步才能到顶。每次你可以选择爬1步或2步，需要多少步你才能爬到顶。 解题思路这个题目跟斐波那契数列一样。爬到最后一步有两种方式： f(n-1) 爬一步到顶 f(n-2) 爬两步到顶同时爬1步只有一种方式，爬两步有两种方式。具体代码python123456class Solution(object): def climbStairs(self,n): a,b = 1,1 for i in range(n): a,b = b,a+b return a java123456789101112public class Solution&#123; public int climbStairs(int n)&#123; if(n==0) return 0; int a=1,b=1; for(int i=0;i&lt;n;i++)&#123; int temp = a; a = b; b = a+temp; &#125; return a; &#125;&#125;]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[Docker入门]]></title>
+      <url>%2F2017%2F01%2F20%2FDocker%E5%85%A5%E9%97%A8%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[[LeetCode]153.Find Minimum in Rotated Sorted Array]]></title>
       <url>%2F2017%2F01%2F19%2FLeetCode-153-Find-Minimum-in-Rotated-Sorted-Array%2F</url>
       <content type="text"><![CDATA[问题描述一个顺序数组，经过一次旋转{1,2,3,4,5} —&gt; {3,4,5,1,2}找出最小元素。 解题思路无论Java还是Python，只要排序过后就可以找出最小元素。时间复杂度O(n)如Python方法min()就能直接得出数组最小值。Java也有Arrays.sort()方法排序。但是如果单纯O(n)的复杂度，明显没有多大的意义。所有这道题应该用二分查找方法来返回最小值。 具体代码python12345678910class Solution(object): def findMin(self,nums): left,right = 0, len(nums) - 1 while left &lt; right: mid = (left + right) / 2 if nums[mid] &lt;= nums[right]: right = mid else: low = mid + 1 return nums[low]]]></content>
@@ -12,7 +26,7 @@
     <entry>
       <title><![CDATA[[转]Java集合小抄]]></title>
       <url>%2F2017%2F01%2F18%2F%E8%BD%AC-Java%E9%9B%86%E5%90%88%E5%B0%8F%E6%8A%84%2F</url>
-      <content type="text"><![CDATA[ListArrayList 以数组实现，节约空间。但是数组容量限制，超出限制会增加50%容量，用System.arraycopy()复制到新的数组。因此最好能给出数组大小的预估值。 默认第一次大小为10。 按下标访问元素，get(下标获取元素)、set(替换下标元素)的性能很高，是数组的基本优势。 按下标插入元素，删除元素，add(i,e)、remove(i)、remove(e),则会用到System.arraycopy()来复制移动受影响的元素,性能会变差。 越是前面的元素，修改的时候移动的元素越多。用add(e)在尾部添加元素、删除最后一个元素不会影响性能。LinkedList 以双向链表实现，链表无容量限制，但是双向链表本身使用了更多空间，每插入一个元素都要构造一个额外的Node对象，也需要额外的指针操作。 按数组下标访问元素，get(i)、set(i,e),需要移动到指定Node节点(i&gt;节点个数时从尾部移动到头部) 插入、删除元素时修改前后节点指针即可 只有在两头add()、addFirst()、addLast()、removeFirst()、removeLast()才能省掉指针的移动。 MapHashMap 以Enty[]数组实现的哈希桶数组，用Key的哈希值取模桶数组的大小可以的到数组的下标 插入元素时，如果两条Key落在同一个桶，称之为哈希冲突或者碰撞 哈希冲突JDK8之前是用的是链表法，用Entry用一个next属性实现多个Entry以单向链表的形式存放。然后遍历链表中的所有元素，逐一比较Key值 在JDK8后，新增链表的阈值为8，链表的元素数量超过阈值时改用红黑树来存储，提高查找速度。 当Entry数量达到数组的75%，数组成倍扩容，重新分配原来的Entry，扩容成本不低。LinkedHashMap 扩展HashMap，每个Entry增加双向链表，非常占内存的数据结构ConcurrentSkipListMap JDK6新增并发优化的SortedMap，以SkipList结构实现，支持CAS无锁算法。]]></content>
+      <content type="text"><![CDATA[集合ListArrayList 以数组实现，节约空间。但是数组容量限制，超出限制会增加50%容量，用System.arraycopy()复制到新的数组。因此最好能给出数组大小的预估值。 默认第一次大小为10。 按下标访问元素，get(下标获取元素)、set(替换下标元素)的性能很高，是数组的基本优势。 按下标插入元素，删除元素，add(i,e)、remove(i)、remove(e),则会用到System.arraycopy()来复制移动受影响的元素,性能会变差。 越是前面的元素，修改的时候移动的元素越多。用add(e)在尾部添加元素、删除最后一个元素不会影响性能。LinkedList 以双向链表实现，链表无容量限制，但是双向链表本身使用了更多空间，每插入一个元素都要构造一个额外的Node对象，也需要额外的指针操作。 按数组下标访问元素，get(i)、set(i,e),需要移动到指定Node节点(i&gt;节点个数时从尾部移动到头部) 插入、删除元素时修改前后节点指针即可 只有在两头add()、addFirst()、addLast()、removeFirst()、removeLast()才能省掉指针的移动。 IteratorIterator 支持从集合中安全删除对象，只需在Iterator上调用remove().ArrayList继承了AbstractList，而AbstractList有定义123456789101112/** * The modCount value that the iterator believes that the backing * List should have. If this expectation is violated, the iterator * has detected concurrent modification. */int expectedModCount = modCount;...final void checkForComodification() &#123; if (modCount != expectedModCount) throw new ConcurrentModificationException();&#125;... checkForComodification这个方法是检查modCount和expectedModCount的值是否是相对，如果不相等则抛出ConcurrentModificationException异常。这是因为在多线程中操作容器时，其他线程可能已经改变了容器的内容，所以每次对容器进行操作的时候modCount都会+1。当Iterator遍历检查到modCount变化是会马上抛出异常，这是Java的fail-fast机制。而Iterator的remove方法在操作完后让expectedModCount和modCount在此相等 MapHashMap 以Enty[]数组实现的哈希桶数组，用Key的哈希值取模桶数组的大小可以的到数组的下标 插入元素时，如果两条Key落在同一个桶，称之为哈希冲突或者碰撞 哈希冲突JDK8之前是用的是链表法，用Entry用一个next属性实现多个Entry以单向链表的形式存放。然后遍历链表中的所有元素，逐一比较Key值 在JDK8后，新增链表的阈值为8，链表的元素数量超过阈值时改用红黑树来存储，提高查找速度。 当Entry数量达到数组的75%，数组成倍扩容，重新分配原来的Entry，扩容成本不低。LinkedHashMap 扩展HashMap，每个Entry增加双向链表，非常占内存的数据结构ConcurrentSkipListMap JDK6新增并发优化的SortedMap，以SkipList结构实现，支持CAS无锁算法。 –待整理– 线程方法区和堆一样，是线程共享的。在方法区中，存储每个类的信息（类名，方法信息，字段信息）、静态变量、常量以及编译器编译后的代码。 基本数据类型int -&gt; Integer Integer a = 59;int b = 59;Integer c = Integer.valueOf(59);Integer d = new Integer(59); a 会调用valueOf方法 这个方法返回的是一个Integer对象。下面是它的源码123456public static Integer valueOf(int i) &#123; assert IntegerCache.high &gt;= 127; if (i &gt;= IntegerCache.low &amp;&amp; i &lt;= IntegerCache.high) return IntegerCache.cache[i + (-IntegerCache.low)]; return new Integer(i);&#125; 可以看出当i的值在[-128,127]而且在IntegerCache中存在此对象，就直接返回引用，没有的话创建一个新的对象。显然在这个a之前内存还没有59这个值，所有它创建了一个Integer对象b 是基本类型，存储在栈中c 也用了valueOf这个方法,此时IntegerCache已经存在这个对象，返回引用。d 是一个新的Integer对象在比较int和Integer值时，Integer会调用intValue自动拆箱成int，进行值比较。]]></content>
     </entry>
 
     
@@ -152,7 +166,7 @@
     <entry>
       <title><![CDATA[Python一些小技巧]]></title>
       <url>%2F2016%2F10%2F10%2FPython%E4%B8%80%E4%BA%9B%E5%B0%8F%E6%8A%80%E5%B7%A7%2F</url>
-      <content type="text"><![CDATA[列表排序 列表和字典的混合排序 12persons = [&#123;'name':'zhang3','age':15&#125;,&#123;'name':'li4','age':12&#125;]persons.sort(lambda a,b:a['age']-b['age']) # 按照年龄排序 两个列表的差异 交集 123a = [1,2,3]b = [2,3,4]value = [v for v in a if v in b] 差集 12...value = [v for v in a if not v in b] 日期datetime 获得今天时间凌晨，格式：’2016-11-02 00:00:00’1now = datetime.datetime.today().replace(hour=0,minute=0,second=0,microsecond=0)]]></content>
+      <content type="text"><![CDATA[列表排序 列表和字典的混合排序 12persons = [&#123;'name':'zhang3','age':15&#125;,&#123;'name':'li4','age':12&#125;]persons.sort(lambda a,b:a['age']-b['age']) # 按照年龄排序 两个列表的差异 交集 123a = [1,2,3]b = [2,3,4]value = [v for v in a if v in b] 差集 12...value = [v for v in a if not v in b] 日期datetime 获得今天时间凌晨，格式：’2016-11-02 00:00:00’ 1now = datetime.datetime.today().replace(hour=0,minute=0,second=0,microsecond=0) 时间相加减 12d1 = datetime.datetime.now()d2 = d1 + datetime.timedelta() 其中timedelta方法可以以下几个日期参数进行修改 days=0,seconds=0,microseconds=0,milliseconds=0,minutes=0,hours=0,weeks=0]]></content>
     </entry>
 
     
