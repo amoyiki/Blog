@@ -8,7 +8,7 @@
     {% set post_class = post_class + ' ' + 'post-sticky' %}
   {% endif %}
 
-  <article class="{{ post_class }}" itemscope itemtype="http://schema.org/Article">
+  <article class="{{ post_class }}" itemscope itemtype="http://schema.org/Article" test>
   <link itemprop="mainEntityOfPage" href="{{ config.url }}{{ url_for(post.path) }}">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
