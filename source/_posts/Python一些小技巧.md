@@ -36,3 +36,10 @@ value = [v for v in a if not v in b]
 ```python
 now = datetime.datetime.today().replace(hour=0,minute=0,second=0,microsecond=0)
 ```
+2. 时间相加减
+```python 
+d1 = datetime.datetime.now()
+d2 = d1 + datetime.timedelta()
+```
+其中`timedelta`方法可以以下几个日期参数进行修改
+> days=0,seconds=0,microseconds=0,milliseconds=0,minutes=0,hours=0,weeks=0

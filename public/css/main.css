@@ -1323,14 +1323,14 @@ pre .javascript .function {
   display: none;
 }
 .posts-expand .post-title {
-  font-size: 26px;
+  font-size: 22px;
   text-align: center;
   word-break: break-word;
   font-weight: 400;
 }
 @media (max-width: 767px) {
   .posts-expand .post-title {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 .posts-expand .post-title-link {
@@ -1371,7 +1371,7 @@ pre .javascript .function {
   font-size: 16px;
 }
 .posts-expand .post-meta {
-  margin: 3px 0 60px 0;
+  margin: 3px 0 30px 0;
   color: #999;
   font-family: 'Helvetica Neue', 'Helvetica Neue', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 12px;
@@ -1676,7 +1676,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #298277;
+  background: #d51466;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2514,9 +2514,9 @@ body {
 .content-wrap {
   float: right;
   box-sizing: border-box;
-  padding: 40px;
+  padding: 30px;
   width: 700px;
-  background: #fff;
+  background: #f5f7f9;
   min-height: 700px;
 }
 @media (min-width: 768px) and (max-width: 991px) {

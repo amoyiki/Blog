@@ -10,18 +10,33 @@ tags:
 
 ### 解题思路 ###
 一开始打算用二分查找的方式，将二维数组划分成两部分，递归判断。实际写出来的时候就发现，二维数组并不好去判断值。后来在网上看到一个更好的方法。
+>将二维数组转化成二维平面，将target值从第一行的最后一个值开始查找，小于就往左边移动，大于就往下面移动。
 
 | | | | |
 | :---: |:---:| :---:| :---:|
 |1|3|5|7|
 |10|11|16|20|
 |23|30|34|50|
-
+<!-- more -->
 ### 具体代码 ###
 **python**
 ```python
-
-
+class Solution(object):
+    def searchMatrix(self, matrix, target):
+        if matrix is None or len(matrix)==0:
+            return False
+        row = len(matrix)
+        col = len(matrix[0])
+        i=col-1
+        j=0
+        while(i>=0 and j<row):
+            if matrix[j][i] == target:
+                return True
+            elif matrix[j][i] > target:
+                i = i - 1
+            elif matrix[j][i] < target:
+                j = j + 1
+        return False
 ```
 **java**
 ```java

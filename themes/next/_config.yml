@@ -3,7 +3,7 @@
 # ---------------------------------------------------------------
 
 # Put your favicon.ico into `hexo-site/source/` directory.
-favicon: /favicon.ico
+favicon: /images/favicon.ico
 
 # Set default keywords (Use a comma to separate)
 keywords: "Hexo, NexT"
@@ -131,8 +131,8 @@ font:
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
-  知乎: http://www.zhihu.com/people/amoyiki
-  微博: http://weibo.com/amoyiki
+  Zhihu: http://www.zhihu.com/people/amoyiki
+  Weibo: http://weibo.com/amoyiki
 
 # Social Links Icons
 # Icon Mapping:

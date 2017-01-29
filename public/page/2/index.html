@@ -51,7 +51,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
 
 
 
@@ -101,6 +101,7 @@
 
 
   <title> 四畳半神话大系 </title>
+  <meta name="baidu-site-verification" content="UqNuoDzFTg" />
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -263,8 +264,8 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/12/LeetCode-290-Word-Pattern/">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article" test>
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/06/Nginx学习笔记（二）/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Amoyiki">
@@ -289,8 +290,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/12/12/LeetCode-290-Word-Pattern/" itemprop="url">
-                  [LeetCode]290. Word Pattern
+                <a class="post-title-link" href="/2017/01/06/Nginx学习笔记（二）/" itemprop="url">
+                  Nginx学习笔记（二）配置及性能调优
                 </a>
               
             
@@ -304,8 +305,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-12T16:48:27+08:00">
-                2016-12-12
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-06T09:39:42+08:00">
+                2017-01-06
               </time>
             
 
@@ -323,8 +324,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Algorithms/" itemprop="url" rel="index">
-                    <span itemprop="name">Algorithms</span>
+                  <a href="/categories/Nginx/" itemprop="url" rel="index">
+                    <span itemprop="name">Nginx</span>
                   </a>
                 </span>
 
@@ -338,8 +339,8 @@
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2016/12/12/LeetCode-290-Word-Pattern/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/12/LeetCode-290-Word-Pattern/" itemprop="commentCount"></span>
+                <a href="/2017/01/06/Nginx学习笔记（二）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/06/Nginx学习笔记（二）/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -366,7 +367,7 @@
 
       
         
-          <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>给定一个模式pattern和一个字符串str，判断str是否满足相同的pattern。<br>例如：<br>pattern = “abba”, str = “dog cat cat dog” 则返回 true.<br><a href="/2016/12/12/LeetCode-290-Word-Pattern/#more" rel="contents">
+          <h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><h3 id="配置文档"><a href="#配置文档" class="headerlink" title="配置文档"></a>配置文档</h3><p>1.nginx文档结构<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">...  #全局块</span><br><span class="line">events &#123; #events块</span><br><span class="line">    ...  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123; #http块</span><br><span class="line">    ... #http全局块</span><br><span class="line"></span><br><span class="line">    server &#123; #server块</span><br><span class="line">        ... #server全局块</span><br><span class="line"></span><br><span class="line">        location [PATTRERN] &#123; #location块</span><br><span class="line">            ...</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        location [PATTRERN] &#123;</span><br><span class="line">            ...</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><a href="/2017/01/06/Nginx学习笔记（二）/#more" rel="contents">
               [阅读全文 &raquo;]
             </a>
           <!--noindex-->
@@ -406,8 +407,8 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/07/LeetCode-303-Range-Sum-Query-Immutable/">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article" test>
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/05/LeetCode-105-Construct-Binary-Tree-from-Preorder-and-Inorder-Traversal/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Amoyiki">
@@ -432,8 +433,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/12/07/LeetCode-303-Range-Sum-Query-Immutable/" itemprop="url">
-                  [LeetCode]303. Range Sum Query - Immutable
+                <a class="post-title-link" href="/2017/01/05/LeetCode-105-Construct-Binary-Tree-from-Preorder-and-Inorder-Traversal/" itemprop="url">
+                  [LeetCode]105.Construct Binary Tree from Preorder and Inorder Traversal
                 </a>
               
             
@@ -447,8 +448,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-07T14:34:39+08:00">
-                2016-12-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-05T17:52:05+08:00">
+                2017-01-05
               </time>
             
 
@@ -481,8 +482,8 @@
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2016/12/07/LeetCode-303-Range-Sum-Query-Immutable/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/07/LeetCode-303-Range-Sum-Query-Immutable/" itemprop="commentCount"></span>
+                <a href="/2017/01/05/LeetCode-105-Construct-Binary-Tree-from-Preorder-and-Inorder-Traversal/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/05/LeetCode-105-Construct-Binary-Tree-from-Preorder-and-Inorder-Traversal/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -509,7 +510,7 @@
 
       
         
-          <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>给定一个数字数组，求下标在i和j(i ≤ j)之间的元素和<br><a href="/2016/12/07/LeetCode-303-Range-Sum-Query-Immutable/#more" rel="contents">
+          <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>给定树的前序遍历和中序遍历，构建出这个二叉树<br><a href="/2017/01/05/LeetCode-105-Construct-Binary-Tree-from-Preorder-and-Inorder-Traversal/#more" rel="contents">
               [阅读全文 &raquo;]
             </a>
           <!--noindex-->
@@ -549,8 +550,8 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/07/了解HashMap/">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article" test>
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/21/LeetCode-74-Search-a-2D-Matrix/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Amoyiki">
@@ -575,8 +576,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/12/07/了解HashMap/" itemprop="url">
-                  HashMap,Hashtable,ConcurrentHashMap,SynchronizedMap的原理与区别
+                <a class="post-title-link" href="/2016/12/21/LeetCode-74-Search-a-2D-Matrix/" itemprop="url">
+                  [LeetCode]74. Search a 2D Matrix
                 </a>
               
             
@@ -590,8 +591,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-07T10:28:18+08:00">
-                2016-12-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-21T10:42:05+08:00">
+                2016-12-21
               </time>
             
 
@@ -609,8 +610,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
+                  <a href="/categories/Algorithms/" itemprop="url" rel="index">
+                    <span itemprop="name">Algorithms</span>
                   </a>
                 </span>
 
@@ -624,8 +625,8 @@
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2016/12/07/了解HashMap/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/07/了解HashMap/" itemprop="commentCount"></span>
+                <a href="/2016/12/21/LeetCode-74-Search-a-2D-Matrix/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/21/LeetCode-74-Search-a-2D-Matrix/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -652,7 +653,41 @@
 
       
         
-          <h2 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h2><h3 id="HashMap的碰撞处理"><a href="#HashMap的碰撞处理" class="headerlink" title="HashMap的碰撞处理"></a>HashMap的碰撞处理</h3><p>HashMap通过hashCode()方法来确定元素存储的bucketIndex位置，不同的Key有概率hash是相同的。<br>两个不同Key的hash值相同时，HashMap通过单链表方式，将新元素加入链表表头，通过next指向原有元素。<br><a href="/2016/12/07/了解HashMap/#more" rel="contents">
+          <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。</p>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>一开始打算用二分查找的方式，将二维数组划分成两部分，递归判断。实际写出来的时候就发现，二维数组并不好去判断值。后来在网上看到一个更好的方法。</p>
+<blockquote>
+<p>将二维数组转化成二维平面，将target值从第一行的最后一个值开始查找，小于就往左边移动，大于就往下面移动。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">7</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">20</td>
+</tr>
+<tr>
+<td style="text-align:center">23</td>
+<td style="text-align:center">30</td>
+<td style="text-align:center">34</td>
+<td style="text-align:center">50</td>
+</tr>
+</tbody>
+</table><a href="/2016/12/21/LeetCode-74-Search-a-2D-Matrix/#more" rel="contents">
               [阅读全文 &raquo;]
             </a>
           <!--noindex-->
@@ -692,8 +727,8 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/06/Java垃圾回收/">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article" test>
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/19/离线安装WMWare-Tools/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Amoyiki">
@@ -718,8 +753,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/12/06/Java垃圾回收/" itemprop="url">
-                  Java垃圾回收
+                <a class="post-title-link" href="/2016/12/19/离线安装WMWare-Tools/" itemprop="url">
+                  离线安装VMWare Tools
                 </a>
               
             
@@ -733,8 +768,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-06T16:32:20+08:00">
-                2016-12-06
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-19T16:26:33+08:00">
+                2016-12-19
               </time>
             
 
@@ -752,8 +787,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java-VM/" itemprop="url" rel="index">
-                    <span itemprop="name">Java VM</span>
+                  <a href="/categories/工具配置/" itemprop="url" rel="index">
+                    <span itemprop="name">工具配置</span>
                   </a>
                 </span>
 
@@ -767,8 +802,8 @@
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2016/12/06/Java垃圾回收/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/06/Java垃圾回收/" itemprop="commentCount"></span>
+                <a href="/2016/12/19/离线安装WMWare-Tools/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/19/离线安装WMWare-Tools/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -796,14 +831,12 @@
       
         
           
-            <h2 id="GC-如何判断对象可以被回收"><a href="#GC-如何判断对象可以被回收" class="headerlink" title="GC 如何判断对象可以被回收"></a>GC 如何判断对象可以被回收</h2><h3 id="引用计数算法"><a href="#引用计数算法" class="headerlink" title="引用计数算法"></a>引用计数算法</h3><p>早期Java使用的算法，现已不用。</p>
-<h3 id="可达性分析算法"><a href="#可达性分析算法" class="headerlink" title="可达性分析算法"></a>可达性分析算法</h3><p>以<code>GC Root</code> 作为起始点，向下搜索。走过的路径成为<code>引用链</code>。当一个对象到<code>GC Root</code><br>没有任何引用链相连时，证明对象不可用。<br><strong>Java的<code>GC Root</code>对象包括：</strong></p>
-<ol>
-<li>虚拟机栈（栈帧中的本地变量表中引用对象）</li>
-<li>方法区中类静态属性引用对象</li>
-<li>方法区常量引用对象</li>
-<li>本地方法JNI引用对象</li>
-</ol>
+            <p><a href="http://softwareupdate.vmware.com/cds/vmw-desktop/ws/11.0.0/2305329/windows/packages/" target="_blank" rel="external">VMWare Tools</a></p>
+<h3 id="解压tools文件"><a href="#解压tools文件" class="headerlink" title="解压tools文件"></a>解压tools文件</h3><p><code>win+R</code>打开运行窗口,解压exe文件</p>
+<blockquote>
+<p>..\tools-windows-*.exe /e .\<br>解压成iso文件<br>msiexec /a “..\tools-windows.msi” /qb TARGETDIR=”.\”</p>
+</blockquote>
+<p>虚拟机加载iso即可安装VMWare Tools</p>
 
           
         
@@ -841,8 +874,8 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/23/LeetCode-463-Island-Perimeter/">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article" test>
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/16/Python协程/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Amoyiki">
@@ -867,8 +900,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/11/23/LeetCode-463-Island-Perimeter/" itemprop="url">
-                  [LeetCode]463. Island Perimeter
+                <a class="post-title-link" href="/2016/12/16/Python协程/" itemprop="url">
+                  Python协程
                 </a>
               
             
@@ -882,8 +915,8 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-23T10:01:55+08:00">
-                2016-11-23
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-16T11:04:21+08:00">
+                2016-12-16
               </time>
             
 
@@ -901,8 +934,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Algorithms/" itemprop="url" rel="index">
-                    <span itemprop="name">Algorithms</span>
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
                   </a>
                 </span>
 
@@ -916,8 +949,8 @@
             
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
-                <a href="/2016/11/23/LeetCode-463-Island-Perimeter/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/23/LeetCode-463-Island-Perimeter/" itemprop="commentCount"></span>
+                <a href="/2016/12/16/Python协程/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/16/Python协程/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -944,7 +977,7 @@
 
       
         
-          <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>给定一个二维地图，1表示陆地，0表示水域。每一个陆地<br>是边长为1的正方形。求岛屿的周长。<br><a href="/2016/11/23/LeetCode-463-Island-Perimeter/#more" rel="contents">
+          <p> <strong> – 施工中 – </strong><br><a href="/2016/12/16/Python协程/#more" rel="contents">
               [阅读全文 &raquo;]
             </a>
           <!--noindex-->
@@ -980,7 +1013,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1021,7 +1054,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">25</span>
+              <span class="site-state-item-count">32</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1052,20 +1085,20 @@
           
             
               <span class="links-of-author-item">
-                <a href="http://www.zhihu.com/people/amoyiki" target="_blank" title="知乎">
+                <a href="http://www.zhihu.com/people/amoyiki" target="_blank" title="Zhihu">
                   
                     <i class="fa fa-fw fa-globe"></i>
                   
-                  知乎
+                  Zhihu
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://weibo.com/amoyiki" target="_blank" title="微博">
+                <a href="http://weibo.com/amoyiki" target="_blank" title="Weibo">
                   
-                    <i class="fa fa-fw fa-globe"></i>
+                    <i class="fa fa-fw fa-weibo"></i>
                   
-                  微博
+                  Weibo
                 </a>
               </span>
             
