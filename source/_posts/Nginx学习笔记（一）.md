@@ -6,7 +6,7 @@ tags:
 - 学习
 ---
 ### 在Linux下安装Nginx ###
-1. 在(Nginx官网)[http://nginx.org/en/download.html]上下载压缩包。
+1. 在[Nginx官网](http://nginx.org/en/download.html)上下载压缩包。
 2. 解压后进行安装
 <!-- more -->
 
