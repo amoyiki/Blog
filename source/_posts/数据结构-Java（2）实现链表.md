@@ -8,7 +8,7 @@ tags:
 
 ### 单向链表 ###
 <!-- more -->
-```python
+```java
 /**
  * Created by Administrator on 2016-11-07.
  */

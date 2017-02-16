@@ -1490,6 +1490,10 @@ pre .javascript .function {
   left: auto;
 }
 .posts-expand .post-eof {
+  height: 3px;
+  border: none;
+  background-color: #ddd;
+  background-image: repeating-linear-gradient(-45deg, #fff, #fff 4px, transparent 4px, transparent 8px);
   margin: 30px auto 30px;
 }
 .post:last-child .post-eof.post-eof.post-eof {
@@ -1676,7 +1680,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #90322a;
+  background: #42cca3;
 }
 .links-of-blogroll {
   font-size: 13px;

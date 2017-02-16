@@ -45,6 +45,7 @@ class Website(Item):
 - name 标识spider
 - start_urls 启动爬虫时进行爬取的url列表，默认为空
 - parse() 每个初始的url下载后的response都会传到该方法内，在这个方法里可以对数据进行处理。 
+
 ```python
 from scrapy.spiders import Spider
 from scrapy.selector import Selector
